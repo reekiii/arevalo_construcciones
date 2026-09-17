@@ -2,7 +2,7 @@ import React from 'react';
 
 function Nosotros() {
   return (
-    <div className="animate-fade-in py-20 bg-brand-blue text-white min-h-screen relative overflow-hidden flex flex-col justify-center">
+    <div className="animate-fade-in py-20 bg-brand-blue text-white min-h-screen relative overflow-hidden">
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-6">Nuestra Historia y Valores</h1>
