@@ -19,7 +19,7 @@ function Footer() {
 
           {/* Enlaces Rápidos */}
           <div className="md:col-span-1">
-            <h4 className="text-white font-heading font-bold mb-4 uppercase tracking-wider text-sm">Explorar</h4>
+            <h4 className="text-brand-accent font-heading font-bold mb-4 uppercase tracking-wider text-sm">Explorar</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/" className="hover:text-brand-accent transition">Inicio</Link></li>
               <li><Link to="/servicios" className="hover:text-brand-accent transition">Servicios</Link></li>
@@ -31,7 +31,7 @@ function Footer() {
 
           {/* Servicios */}
           <div className="md:col-span-1">
-            <h4 className="text-white font-heading font-bold mb-4 uppercase tracking-wider text-sm">Servicios</h4>
+            <h4 className="text-brand-accent font-heading font-bold mb-4 uppercase tracking-wider text-sm">Servicios</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/servicios" className="hover:text-brand-accent transition">Reformas Integrales</Link></li>
               <li><Link to="/servicios" className="hover:text-brand-accent transition">Obra Nueva</Link></li>
@@ -41,7 +41,7 @@ function Footer() {
 
           {/* Contacto */}
           <div className="md:col-span-1 flex flex-col items-center md:items-start">
-            <h4 className="text-white font-heading font-bold mb-4 uppercase tracking-wider text-sm">Contacto</h4>
+            <h4 className="text-brand-accent font-heading font-bold mb-4 uppercase tracking-wider text-sm">Contacto</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-center md:items-start justify-center md:justify-start">
                 <svg className="w-5 h-5 mr-3 text-brand-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
