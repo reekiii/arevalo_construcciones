@@ -1,57 +1,107 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 function Servicios() {
+  const { t, lang } = useLanguage();
+
+  const services = [
+    {
+      title: t('s1_title'),
+      desc: t('s1_desc'),
+      img: "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=800",
+      features: lang === 'ca' 
+        ? ["Paleteria i enderrocs", "Lampisteria i electricitat", "Pladur i aïllaments", "Pintura i acabats"] 
+        : ["Albañilería y demolición", "Fontanería y electricidad", "Pladur y aislamientos", "Pintura y acabados"]
+    },
+    {
+      title: t('s2_title'),
+      desc: t('s2_desc'),
+      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
+      features: lang === 'ca'
+        ? ["Fonamentació i estructura", "Assessorament tècnic", "Eficiència energètica", "Lliurament claus en mà"]
+        : ["Cimentación y estructura", "Asesoramiento técnico", "Eficiencia energética", "Entrega llave en mano"]
+    },
+    {
+      title: t('s3_title'),
+      desc: t('s3_desc'),
+      img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800",
+      features: lang === 'ca'
+        ? ["Restauració de façanes", "Reforços estructurals", "Impermeabilització", "Comunitats de propietaris"]
+        : ["Restauración de fachadas", "Refuerzos estructurales", "Impermeabilización", "Comunidades de propietarios"]
+    }
+  ];
+
   return (
-    <div className="animate-fade-in py-20 bg-gray-50 min-h-screen">
+    <div className="animate-fade-in py-12 sm:py-16 md:py-20 bg-brand-bg min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-blue mb-4">Nuestros Servicios</h1>
-          <div className="w-24 h-1.5 bg-brand-accent mx-auto mb-6 rounded"></div>
-          <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            Ofrecemos un abanico completo de soluciones constructivas. Contamos con un equipo de profesionales cualificados y los mejores materiales del mercado para garantizar resultados impecables y duraderos en cada una de nuestras intervenciones.
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-brand-blue mb-4">
+            {t('services_title')}
+          </h1>
+          <div className="w-20 h-1.5 bg-brand-accent mx-auto mb-6 rounded-none"></div>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
+            {t('services_desc')}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Servicio 1 */}
-          <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-brand-accent group">
-            <div className="bg-brand-light w-16 h-16 rounded-full flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-heading font-bold text-brand-blue mb-4">Reformas Integrales</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Transformamos por completo tu vivienda o local comercial. Nos encargamos de todo el proceso de principio a fin: albañilería, fontanería, electricidad, pintura y acabados. Gestionamos tu obra para que no tengas que preocuparte por nada, cumpliendo siempre con los plazos acordados.
-            </p>
-          </div>
+        {/* Clean 3-column cards without button spam */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          {services.map((srv, idx) => (
+            <div 
+              key={idx}
+              className="bg-white rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 border border-stone-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="relative h-52 sm:h-56 overflow-hidden">
+                  <img 
+                    src={srv.img} 
+                    alt={srv.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+                  <span className="absolute bottom-4 left-5 text-white font-heading font-bold text-lg sm:text-xl drop-shadow">
+                    {srv.title}
+                  </span>
+                </div>
 
-          {/* Servicio 2 */}
-          <div className="bg-brand-blue rounded-xl p-10 shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-brand-accent text-white group transform md:-translate-y-4">
-            <div className="bg-brand-blue-light w-16 h-16 rounded-full flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-heading font-bold text-white mb-4">Obra Nueva</h3>
-            <p className="text-brand-light leading-relaxed">
-              Construimos la casa de tus sueños desde cero. Te asesoramos desde el diseño arquitectónico inicial, el estudio del terreno y la cimentación, hasta la entrega de llaves. Utilizamos técnicas modernas de construcción que aseguran la máxima eficiencia energética y un diseño de vanguardia.
-            </p>
-          </div>
+                <div className="p-6 sm:p-7">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    {srv.desc}
+                  </p>
 
-          {/* Servicio 3 */}
-          <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-brand-accent group">
-            <div className="bg-brand-light w-16 h-16 rounded-full flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-              </svg>
+                  <div className="space-y-2.5 pt-4 border-t border-gray-100">
+                    {srv.features.map((feat, fIdx) => (
+                      <div key={fIdx} className="flex items-center text-xs font-medium text-gray-700">
+                        <span className="w-4 h-4 rounded-none bg-emerald-100 text-emerald-700 flex items-center justify-center mr-2 font-bold text-[10px] flex-shrink-0 border border-emerald-300">✓</span>
+                        {feat}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl font-heading font-bold text-brand-blue mb-4">Rehabilitación</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Restauración integral de fachadas, refuerzos estructurales y reparación de cubiertas. Le devolvemos a los edificios antiguos su esplendor original mejorando al mismo tiempo su seguridad estructural y el aislamiento térmico/acústico. Especialistas en comunidades de propietarios.
-            </p>
-          </div>
+          ))}
         </div>
+
+        {/* Asesoramiento Técnico CTA */}
+        <div className="bg-brand-bg-alt text-gray-800 rounded-none p-6 sm:p-10 md:p-12 text-center max-w-4xl mx-auto shadow-xl border border-stone-300">
+          <h3 className="text-xl sm:text-3xl font-heading font-extrabold text-brand-blue mb-3">
+            {t('services_cta_title')}
+          </h3>
+          <p className="text-gray-700 text-sm sm:text-base mb-6 max-w-2xl mx-auto leading-relaxed">
+            {t('services_cta_desc')}
+          </p>
+          <Link 
+            to="/contacto"
+            className="inline-block bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-8 rounded-none shadow-lg transition transform hover:-translate-y-0.5 text-xs sm:text-sm uppercase tracking-wider w-full sm:w-auto"
+          >
+            {t('services_cta_btn')}
+          </Link>
+        </div>
+
       </div>
     </div>
   );

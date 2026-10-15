@@ -1,23 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap');
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
 
 @theme {
   --color-brand-blue: #004097;
-  --color-brand-blue-light: #094592;
-  --color-brand-blue-dark: #002b66;
-  --color-brand-light: #e5eff6;
+  --color-brand-blue-light: #0d4fa8;
+  --color-brand-blue-dark: #00275c;
+  --color-brand-light: #f0f6fb;
   --color-brand-accent: #f59e0b;
+  --color-brand-accent-hover: #d97706;
   
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Fondos arquitectónicos: beige piedra caliza luminosa con contraste real */
+  --color-brand-bg: #E8E4DC;
+  --color-brand-bg-alt: #DDD7CB;
 }
 
-/* Simple fade-in animation */
+/* Transiciones y suavizado de texto */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -26,5 +35,5 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.45s ease-out forwards;
 }
