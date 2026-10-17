@@ -13,12 +13,11 @@ function Home() {
       <section className="relative bg-slate-950 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Obra en construcción"
-            className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-1000"
+            src="/fondohero.jpeg"
+            alt="Obra y piscina Arévalo Construcciones"
+            className="w-full h-full object-cover opacity-65 scale-105 transform hover:scale-100 transition-transform duration-1000"
             onError={(e) => {
-              e.target.src =
-                "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2070";
+              e.target.src = "/13.jpeg";
             }}
           />
           {/* Velo oscuro cinematográfico neutro para ver la foto real sin tinte azul */}
@@ -124,6 +123,10 @@ function Home() {
                   <span className="w-5 h-5 rounded-none bg-emerald-100 text-emerald-700 flex items-center justify-center mr-3 flex-shrink-0 font-bold text-xs border border-emerald-300">✓</span>
                   {t('about_check3')}
                 </div>
+                <div className="flex items-center text-sm font-semibold text-gray-800">
+                  <span className="w-5 h-5 rounded-none bg-emerald-100 text-emerald-700 flex items-center justify-center mr-3 flex-shrink-0 font-bold text-xs border border-emerald-300">✓</span>
+                  {t('about_check4')}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
@@ -142,20 +145,20 @@ function Home() {
               </div>
             </div>
 
-            {/* Cuadrícula de fotos */}
+            {/* Cuadrícula de fotos reales */}
             <div className="grid grid-cols-2 gap-3.5 sm:gap-5 relative items-start">
-              <div className="relative overflow-hidden rounded-2xl shadow-xl transform hover:scale-[1.01] transition duration-500 border border-stone-300">
+              <div className="relative overflow-hidden rounded-none shadow-xl transform hover:scale-[1.01] transition duration-500 border border-stone-300 aspect-[3/4] bg-stone-900">
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=600"
-                  alt="Construcción"
-                  className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-2xl block"
+                  src="/22.jpeg"
+                  alt="Restauración de fachada con grúa Arévalo"
+                  className="w-full h-full object-cover object-center rounded-none block"
                 />
               </div>
-              <div className="relative overflow-hidden rounded-2xl shadow-xl transform hover:scale-[1.01] transition duration-500 mt-6 sm:mt-8 md:mt-10 border border-stone-300">
+              <div className="relative overflow-hidden rounded-none shadow-xl transform hover:scale-[1.01] transition duration-500 mt-6 sm:mt-8 md:mt-10 border border-stone-300 aspect-[3/4] bg-stone-900">
                 <img
-                  src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=600"
-                  alt="Reforma interior"
-                  className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-2xl block"
+                  src="/11.jpeg"
+                  alt="Reforma de baño y plato de ducha Arévalo"
+                  className="w-full h-full object-cover object-center rounded-none block"
                 />
               </div>
             </div>

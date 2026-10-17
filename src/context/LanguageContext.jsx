@@ -18,8 +18,8 @@ const translations = {
     hero_btn_services: "Ver Servicios",
 
     // Stats
-    stat_years: "+2",
-    stat_years_lbl: "Años de Experiencia",
+    stat_years: "3ª Gen.",
+    stat_years_lbl: "Familia de Albañiles",
     stat_clients: "100%",
     stat_clients_lbl: "Clientes Satisfechos",
     stat_turnkey: "Llave en mano",
@@ -35,38 +35,42 @@ const translations = {
     // Quienes Somos Home
     about_title: "Tu proyecto, en las mejores manos.",
     about_p1:
-      "Con más de 15 años de trayectoria en el sector, en Arévalo Construcciones nos hemos consolidado como un referente de seriedad y calidad. Entendemos que una obra no es solo un montón de ladrillos, sino la ilusión de nuestros clientes tomando forma.",
+      "Con una sólida tradición familiar que abarca 3 generaciones de albañiles, en Arévalo Construcciones convertimos cualquier proyecto en un espacio de calidad. Empecé en el oficio con solo 15 años aprendiendo de mi padre y mi abuelo: para nosotros ver los resultados de una obra impecable y a los clientes satisfechos no tiene precio.",
     about_p2:
-      "Nos encargamos de absolutamente todo, coordinando oficios y gestionando plazos para que tú no tengas que preocuparte por nada. Trabajamos en reformas integrales, rehabilitación y proyectos de obra nueva desde cero.",
-    about_check1: "Presupuestos detallados y cerrados sin sorpresas",
-    about_check2: "Cumplimiento estricto de fechas de entrega por contrato",
-    about_check3: "Coordinación integral de todos los gremios (llave en mano)",
-    about_btn_more: "Leer más sobre nosotros",
+      "Nos encargamos de absolutamente todo, coordinando todos los oficios y gestionando plazos para que tú no tengas que preocuparte por nada. Realizamos desde reformas de baños y cocinas hasta reformas integrales, suelos, terrazas y proyectos de obra nueva.",
+    about_check1: "Presupuestos detallados y transparentes partida por partida",
+    about_check2: "Compromiso estricto de plazos de entrega por contrato",
+    about_check3: "Coordinación integral 'Llave en mano' (albañilería, fontanería, electricidad, pintura)",
+    about_check4: "Seguro de Responsabilidad Civil en vigor y tramitación de licencias",
+    about_btn_more: "Conoce nuestra historia",
     about_btn_works: "Ver proyectos realizados",
 
     // CTA
     cta_title: "¿Preparado para empezar tu reforma?",
     cta_desc:
-      "Pide tu valoración hoy mismo. Estudiamos tu caso y te asesoramos con la máxima transparencia.",
+      "Pide tu valoración hoy mismo. Estudiamos tu caso y te asesoramos con la máxima transparencia y presupuesto sin compromiso.",
     cta_btn: "Contactar ahora",
 
     // Servicios
-    services_title: "Nuestros Servicios",
+    services_title: "Nuestros Servicios y Especialidades",
     services_desc:
-      "Ofrecemos un abanico completo de soluciones constructivas. Contamos con un equipo de profesionales cualificados y los mejores materiales del mercado para garantizar resultados impecables y duraderos en cada una de nuestras intervenciones.",
-    services_cta_title: "¿Necesitas asesoramiento técnico para tu obra?",
+      "Especialistas en cuartos de baño, cocinas, suelos de interior porcelánicos, terrazas y reformas integrales 'llave en mano'. Desde pequeños trabajos y averías hasta obras completas.",
+    services_cta_title: "¿Necesitas asesoramiento para tu obra?",
     services_cta_desc:
-      "Tanto si es una reforma integral como una intervención puntual, analizamos la viabilidad y los materiales para tu proyecto.",
-    services_cta_btn: "Consultar con un técnico",
-    s1_title: "Reformas Integrales",
+      "Tanto si es una reforma de baño como una vivienda completa, visitamos tu espacio y te entregamos una valoración detallada.",
+    services_cta_btn: "Consultar con Javier Arévalo",
+    s1_title: "Reformas de Baños y Cocinas",
     s1_desc:
-      "Transformamos por completo tu vivienda o local comercial. Nos encargamos de todo el proceso de principio a fin: albañilería, fontanería, electricidad, pintura y acabados. Gestionamos tu obra para que no tengas que preocuparte por nada, cumpliendo siempre con los plazos acordados.",
-    s2_title: "Obra Nueva",
+      "Nuestra mayor especialidad. Cambios de bañera por plato de ducha antideslizante, alicatados modernos, fontanería, electricidad e instalación de mobiliario con acabados de primera.",
+    s2_title: "Suelos de Interior y Terrazas",
     s2_desc:
-      "Construimos la casa de tus sueños desde cero. Te asesoramos desde el diseño arquitectónico inicial, el estudio del terreno y la cimentación, hasta la entrega de llaves. Utilizamos técnicas modernas de construcción que aseguran la máxima eficiencia energética y un diseño de vanguardia.",
-    s3_title: "Rehabilitación",
+      "Colocación experta de pavimentos porcelánicos, gres y tarimas en interiores. Rehabilitación e impermeabilización de terrazas, patios y exteriores resistentes a la intemperie.",
+    s3_title: "Reformas Integrales 'Llave en Mano'",
     s3_desc:
-      "Restauración integral de fachadas, refuerzos estructurales y reparación de cubiertas. Le devolvemos a los edificios antiguos su esplendor original mejorando al mismo tiempo su seguridad estructural y el aislamiento térmico/acústico. Especialistas en comunidades de propietarios.",
+      "Nosotros lo organizamos todo: albañilería, fontanería, electricidad, pladur y pintura. Una sola persona responsable para que tú solo disfrutes del resultado final.",
+    s4_title: "Obra Nueva y Rehabilitación",
+    s4_desc:
+      "Construcción de viviendas unifamiliares, ampliaciones, restauración de fachadas y cubiertas. Máxima solidez constructiva y cumplimiento estricto de la normativa.",
 
     // Proyectos
     projects_title: "Proyectos Destacados",
@@ -92,45 +96,63 @@ const translations = {
     projects_cta_btn: "Consultar con un técnico",
 
     // Nosotros
-    we_title: "Nuestra Historia y Valores",
+    we_title: "3ª Generación de Albañiles",
+    we_subtitle: "Pasión por el oficio bien hecho desde los 15 años",
     we_desc:
-      "En Arévalo Construcciones somos mucho más que una empresa de reformas; somos un equipo apasionado por el arte de construir.",
-    we_c1_title: "Compromiso y Transparencia",
+      "En Arévalo Construcciones el oficio lo llevamos en la sangre. Mi padre y mi abuelo eran albañiles y empecé con 15 años en la obra. Para mí es uno de los trabajos más satisfactorios: ver los resultados y los clientes contentos no tiene precio.",
+    we_c1_title: "Presupuesto Cerrado y Transparente",
     we_c1_desc:
-      "Nos enorgullece nuestra seriedad. Presentamos presupuestos claros, sin sorpresas ni costes ocultos. Mantenemos una comunicación constante durante cada fase del proyecto, para que estés informado en todo momento sobre los avances de tu obra.",
-    we_c2_title: "Calidad Garantizada",
+      "Detallamos muy bien cada faena en el presupuesto para que no haya dudas. Sabemos que la confianza se gana con claridad: si surge cualquier imprevisto se comenta y valora contigo antes de ejecutarlo.",
+    we_c2_title: "Compromiso de Plazos y 'Llave en Mano'",
     we_c2_desc:
-      "Nuestra experiencia en el sector nos permite seleccionar los mejores materiales y rodearnos de los mejores oficios. Cada detalle cuenta, y por eso sometemos todas nuestras obras a rigurosos controles de calidad. Tu tranquilidad es nuestro principal objetivo.",
+      "Nos comprometemos a fechas de entrega por escrito. Nosotros organizamos todos los oficios (fontanería, electricidad, carpintería, pintura) para que no tengas que buscar ni coordinar a nadie.",
+    we_c3_title: "Obra 100% Asegurada y Garantizada",
+    we_c3_desc:
+      "Contamos con Seguro de Responsabilidad Civil en vigor para máxima tranquilidad y gestionamos la tramitación de licencias de obra en los ayuntamientos de la zona.",
+    we_c4_title: "Pagos Claros por Fases",
+    we_c4_desc:
+      "Máxima seguridad para tu inversión: abono de material necesario, 40% al inicio de los trabajos, 30% a mitad de obra y el 30% restante al finalizar cuando compruebes la calidad de los acabados.",
 
-    // Contacto
+    // Contacto (100% WhatsApp y llamada directa - Sin formulario web)
     contact_title: "Hablemos de tu proyecto",
+    contact_hero_badge: "Atención Directa y Personalizada",
     contact_desc:
-      "¿Tienes una idea en mente? Estamos listos para hacerla realidad. Contáctanos y te asesoraremos sin compromiso.",
-    contact_phone_lbl: "Llámanos",
-    contact_email_lbl: "Email",
-    contact_wa_btn: "Contactar por WhatsApp",
-    contact_form_title: "Envíanos un mensaje",
-    contact_name: "Nombre completo",
-    contact_name_placeholder: "Tu nombre y apellidos",
-    contact_phone: "Teléfono de contacto",
-    contact_phone_placeholder: "600 00 00 00",
-    contact_email_field: "Correo electrónico",
-    contact_email_placeholder: "tu@email.com",
-    contact_service: "Servicio de interés",
-    contact_service_opt: "Selecciona una opción...",
-    contact_msg: "Detalles del proyecto",
-    contact_msg_placeholder: "Cuéntanos qué necesitas hacer (tipo de reforma, metros, localidad...)",
-    contact_submit: "Solicitar Presupuesto",
-    contact_sending: "Enviando solicitud...",
-    contact_success_title: "¡Solicitud enviada con éxito!",
-    contact_success_desc: "Hemos recibido tu mensaje correctamente. Nos pondremos en contacto contigo lo antes posible para valorar tu proyecto.",
-    contact_error_title: "No se pudo enviar el mensaje",
-    contact_error_desc: "Ha ocurrido un error de conexión. Por favor, llámanos directamente al 622 03 27 04 o envíanos un WhatsApp.",
-    contact_send_another: "Enviar otra consulta",
+      "En Arévalo Construcciones te atendemos de forma directa y cercana, de profesional a cliente, sin intermediarios ni comerciales. Visita y presupuesto 100% gratuito y sin compromiso.",
+    contact_wa_title: "Canal Preferente: WhatsApp Directo",
+    contact_wa_tag: "Respuesta rápida",
+    contact_wa_desc:
+      "La forma más rápida y cómoda de contactar con Javier Arévalo. Puedes escribirnos, enviarnos fotos de tu espacio (baño, cocina, terraza, fachadas), medidas aproximadas o notas de voz para una valoración rápida.",
+    contact_wa_presets_title: "O pulsa en el tipo de trabajo que necesitas para iniciar el chat:",
+    contact_wa_opt1: "Reforma de Baño o Ducha de Obra",
+    contact_wa_opt2: "Reforma de Cocina",
+    contact_wa_opt3: "Reforma Integral de Vivienda",
+    contact_wa_opt4: "Suelos, Terrazas o Exteriores",
+    contact_wa_opt5: "Consulta general / Visita técnica",
+    contact_wa_btn: "Hablar con Javier",
+    contact_call_title: "Llamada Telefónica Directa",
+    contact_call_desc: "¿Prefieres hablar directamente? Llámanos para resolver cualquier duda o coordinar una visita a tu vivienda o terreno.",
+    contact_call_btn: "Llamar al 622 03 27 04",
+    contact_call_hours_lbl: "Horario de atención",
+    contact_call_hours_val: "Lunes a Viernes de 07:00 a 19:00 | Sábados de 09:00 a 14:00",
+    contact_email_title: "Correo Electrónico Oficial",
+    contact_email_desc: "Ideal para envío de proyectos técnicos, planos arquitectónicos en PDF, pliegos o mediciones de obra.",
+    contact_email_btn: "Enviar email con planos",
+    contact_onsite_title: "Trabajamos directamente a domicilio",
+    contact_onsite_badge: "Atención en tu obra o vivienda",
+    contact_onsite_desc:
+      "No disponemos de tienda comercial ni oficina de exposición abierta al público. Javier Arévalo se desplaza personalmente a tu vivienda, piso, local o terreno para tomar medidas exactas y preparar un presupuesto a tu medida.",
+    contact_coverage_lbl: "Zona de desplazamiento habitual",
+    contact_coverage_val: "El Vendrell, Santa Oliva, Calafell, Cunit, Bellvei, Albinyana, La Bisbal del Penedès y toda la comarca del Baix Penedès y Camp de Tarragona.",
+    contact_trust1: "Visita y presupuesto 100% gratuitos y sin compromiso",
+    contact_trust2: "Presupuesto cerrado por contrato sin sorpresas",
+    contact_trust3: "Seguro de Responsabilidad Civil en vigor",
+    contact_fiscal_title: "Información Fiscal y Registro Legal (LSSI / RGPD)",
+    contact_fiscal_desc:
+      "Domicilio exclusivamente fiscal y de notificación legal. No se realizan visitas comerciales ni atención en esta dirección; toda la atención se realiza in situ a domicilio o mediante llamada / WhatsApp.",
 
     // Footer
     footer_desc:
-      "Especialistas en reformas integrales, obra nueva y rehabilitación con la máxima calidad y compromiso. Construimos tus sueños.",
+      "Empresa familiar de construcción y reformas en El Vendrell. 3ª generación de albañiles especializados en baños, cocinas, suelos, terrazas y reformas integrales con la máxima calidad y compromiso.",
     footer_explore: "Explorar",
     footer_services: "Servicios",
     footer_contact: "Contacto",
@@ -176,8 +198,8 @@ const translations = {
     hero_btn_services: "Veure Serveis",
 
     // Stats
-    stat_years: "+2",
-    stat_years_lbl: "Anys d'Experiència",
+    stat_years: "3a Gen.",
+    stat_years_lbl: "Família de Paletes",
     stat_clients: "100%",
     stat_clients_lbl: "Clients Satisfets",
     stat_turnkey: "Claus en mà",
@@ -193,38 +215,42 @@ const translations = {
     // Quienes Somos Home
     about_title: "El teu projecte, en les millors mans.",
     about_p1:
-      "Amb més de 15 anys de trajectòria en el sector, a Arévalo Construcciones ens hem consolidat com un referent de serietat i qualitat. Entenem que una obra no és només un munt de maons, sinó la il·lusió dels nostres clients prenent forma.",
+      "Amb una sòlida tradició familiar que abasta 3 generacions de paletes, a Arévalo Construcciones convertim qualsevol projecte en un espai de qualitat. Vaig començar a l'ofici amb només 15 anys aprenent del meu pare i el meu avi: per a nosaltres veure els resultats d'una obra impecable i els clients satisfets no té preu.",
     about_p2:
-      "Ens encarreguem d'absolutament tot, coordinant oficis i gestionant terminis perquè no t'hagis de preocupar de res. Treballem en reformes integrals, rehabilitació i projectes d'obra nova des de zero.",
-    about_check1: "Pressupostos detallats i tancats sense sorpreses",
-    about_check2: "Compliment estricte de dates d'entrega per contracte",
-    about_check3: "Coordinació integral de tots els oficis (claus en mà)",
-    about_btn_more: "Llegir més sobre nosaltres",
+      "Ens encarreguem d'absolutament tot, coordinant tots els oficis i gestionant terminis perquè no t'hagis de preocupar de res. Realitzem des de reformes de banys i cuines fins a reformes integrals, terres, terrasses i projectes d'obra nova.",
+    about_check1: "Pressupostos detallats i transparents partida per partida",
+    about_check2: "Compromís estricte de terminis de lliurament per contracte",
+    about_check3: "Coordinació integral 'Claus en mà' (paleteria, lampisteria, electricitat, pintura)",
+    about_check4: "Assegurança de Responsabilitat Civil en vigor i tramitació de llicències",
+    about_btn_more: "Coneix la nostra història",
     about_btn_works: "Veure projectes fets",
 
     // CTA
     cta_title: "A punt per començar la teva reforma?",
     cta_desc:
-      "Demana la teva valoració avui mateix. Estudiem el teu cas i t'assessorem amb la màxima transparència.",
+      "Demana la teva valoració avui mateix. Estudiem el teu cas i t'assessorem amb la màxima transparència i pressupost sense compromís.",
     cta_btn: "Contactar ara",
 
     // Servicios
-    services_title: "Els Nostres Serveis",
+    services_title: "Els Nostres Serveis i Especialitats",
     services_desc:
-      "Oferim un ventall complet de solucions constructives. Comptem amb un equip de professionals qualificats i els millors materials del mercat per garantir resultats impecables i duradors en cadascuna de les nostres intervencions.",
-    services_cta_title: "Necessites assessorament tècnic per a la teva obra?",
+      "Especialistes en cambres de bany, cuines, paviments d'interior porcel·lànics, terrasses i reformes integrals 'claus en mà'. Des de petites feines i avaries fins a obres completes.",
+    services_cta_title: "Necessites assessorament per a la teva obra?",
     services_cta_desc:
-      "Tant si és una reforma integral com una intervenció puntual, analitzem la viabilitat i els materials per al teu projecte.",
-    services_cta_btn: "Consultar amb un tècnic",
-    s1_title: "Reformes Integrals",
+      "Tant si és una reforma de bany com un habitatge complet, visitem el teu espai i et lliurem una valoració detallada.",
+    services_cta_btn: "Consultar amb Javier Arévalo",
+    s1_title: "Reformes de Banys i Cuines",
     s1_desc:
-      "Transformem per complet el teu habitatge o local comercial. Ens encarreguem de tot el procés de principi a fi: paleteria, lampisteria, electricitat, pintura i acabats. Gestionem la teva obra perquè no t'hagis de preocupar de res, complint sempre amb els terminis acordats.",
-    s2_title: "Obra Nova",
+      "La nostra major especialitat. Canvis de banyera per plat de dutxa antilliscant, enrajolats moderns, lampisteria, electricitat i instal·lació de mobiliari amb acabats de primera qualitat.",
+    s2_title: "Terres d'Interior i Terrasses",
     s2_desc:
-      "Construïm la casa dels teus somnis des de zero. T'assessorem des del disseny arquitectònic inicial, l'estudi del terreny i la fonamentació, fins al lliurament de claus. Utilitzem tècniques modernes de construcció que asseguren la màxima eficiència energètica i un disseny d'avantguarda.",
-    s3_title: "Rehabilitació",
+      "Col·locació experta de paviments porcel·lànics, gres i tarimes en interiors. Rehabilitació i impermeabilització de terrasses, patis i exteriors resistents al pas del temps.",
+    s3_title: "Reformes Integrals 'Claus en Mà'",
     s3_desc:
-      "Restauració integral de façanes, reforços estructurals i reparació de cobertes. Tornem als edificis antics la seva esplendor original millorant alhora la seva seguretat estructural i l'aïllament tèrmic/acústic. Especialistes en comunitats de propietaris.",
+      "Nosaltres ho organitzem tot: paleteria, lampisteria, electricitat, pladur i pintura. Una sola persona responsable perquè tu només gaudeixis del resultat final.",
+    s4_title: "Obra Nova i Rehabilitació",
+    s4_desc:
+      "Construcció d'habitatges unifamiliars, ampliacions, restauració de façanes i cobertes. Màxima solidesa constructiva i compliment estricte de la normativa.",
 
     // Proyectos
     projects_title: "Projectes Destacats",
@@ -250,45 +276,63 @@ const translations = {
     projects_cta_btn: "Consultar amb un tècnic",
 
     // Nosotros
-    we_title: "La Nostra Història i Valors",
+    we_title: "3a Generació de Paletes",
+    we_subtitle: "Passió per l'ofici ben fet des dels 15 anys",
     we_desc:
-      "A Arévalo Construcciones som molt més que una empresa de reformes; som un equip apassionat per l'art de construir.",
-    we_c1_title: "Compromís i Transparència",
+      "A Arévalo Construcciones l'ofici el portem a la sang. El meu pare i el meu avi eren paletes i vaig començar amb 15 anys a l'obra. Per a mi és un dels treballs més satisfactoris: veure els resultats i els clients contents no té preu.",
+    we_c1_title: "Pressupost Tancat i Transparent",
     we_c1_desc:
-      "Ens enorgulleix la nostra serietat. Presentem pressupostos clars, sense sorpreses ni costos ocults. Mantenim una comunicació constant durant cada fase del projecte, perquè estiguis informat en tot moment sobre els avenços de la teva obra.",
-    we_c2_title: "Qualitat Garantida",
+      "Detallem molt bé cada feina en el pressupost perquè no hi hagi dubtes. Sabem que la confiança es guanya amb claredat: si sorgeix qualsevol imprevist es comenta i es valora amb tu abans d'executar-lo.",
+    we_c2_title: "Compromís de Terminis i 'Claus en Mà'",
     we_c2_desc:
-      "La nostra experiència en el sector ens permet seleccionar els millors materials i envoltar-nos dels millors oficis. Cada detall compta, i per això sotmetem totes les nostres obres a rigorosos controls de qualitat. La teva tranquil·litat és el nostre principal objectiu.",
+      "Ens comprometem a dates de lliurament per escrit. Nosaltres organitzem tots els oficis (lampisteria, electricitat, fusteria, pintura) perquè no hagis de buscar ni coordinar ningú.",
+    we_c3_title: "Obra 100% Assegurada i Garantida",
+    we_c3_desc:
+      "Comptem amb Assegurança de Responsabilitat Civil en vigor per a màxima tranquil·litat i gestionem la tramitació de llicències d'obra als ajuntaments de la zona.",
+    we_c4_title: "Pagaments Clars per Fases",
+    we_c4_desc:
+      "Màxima seguretat per a la teva inversió: abonament de material necessari, 40% a l'inici dels treballs, 30% a meitat d'obra i el 30% restant en finalitzar quan comprovis la qualitat dels acabats.",
 
-    // Contacto
+    // Contacte (100% WhatsApp i trucada directa - Sense formulari web)
     contact_title: "Parlem del teu projecte",
+    contact_hero_badge: "Atenció Directa i Personalitzada",
     contact_desc:
-      "Tens una idea al cap? Estem a punt per fer-la realitat. Contacta'ns i t'assessorarem sense compromís.",
-    contact_phone_lbl: "Truca'ns",
-    contact_email_lbl: "Email",
-    contact_wa_btn: "Contactar per WhatsApp",
-    contact_form_title: "Envia'ns un missatge",
-    contact_name: "Nom complet",
-    contact_name_placeholder: "El teu nom i cognoms",
-    contact_phone: "Telèfon de contacte",
-    contact_phone_placeholder: "600 00 00 00",
-    contact_email_field: "Correu electrònic",
-    contact_email_placeholder: "el_teu@email.com",
-    contact_service: "Servei d'interès",
-    contact_service_opt: "Selecciona una opció...",
-    contact_msg: "Detalls del projecte",
-    contact_msg_placeholder: "Explica'ns quina reforma o obra necessites (metres, localitat...)",
-    contact_submit: "Sol·licitar Pressupost",
-    contact_sending: "Enviant sol·licitud...",
-    contact_success_title: "Sol·licitud enviada amb èxit!",
-    contact_success_desc: "Hem rebut el teu missatge correctament. Ens posarem en contacte amb tu al més aviat possible per valorar el teu projecte.",
-    contact_error_title: "No s'ha pogut enviar el missatge",
-    contact_error_desc: "S'ha produït un error de connexió. Si us plau, truca'ns directament al 622 03 27 04 o envia'ns un WhatsApp.",
-    contact_send_another: "Enviar una altra consulta",
+      "A Arévalo Construcciones t'atenem de manera directa i propera, de professional a client, sense intermediaris ni comercials. Visita i pressupost 100% gratuït i sense compromís.",
+    contact_wa_title: "Canal Preferent: WhatsApp Directe",
+    contact_wa_tag: "Resposta ràpida",
+    contact_wa_desc:
+      "La manera més ràpida i còmoda de contactar amb Javier Arévalo. Pots escriure'ns, enviar-nos fotos del teu espai (bany, cuina, terrassa, façanes), mides aproximades o notes de veu per a una valoració ràpida.",
+    contact_wa_presets_title: "O prem sobre el tipus de feina que necessites per iniciar el xat:",
+    contact_wa_opt1: "Reforma de Bany o Plat de Dutxa",
+    contact_wa_opt2: "Reforma de Cuina",
+    contact_wa_opt3: "Reforma Integral d'Habitatge",
+    contact_wa_opt4: "Terres, Terrasses o Exteriors",
+    contact_wa_opt5: "Consulta general / Visita tècnica",
+    contact_wa_btn: "Parlar amb Javier",
+    contact_call_title: "Trucada Telefònica Directa",
+    contact_call_desc: "Prefereixes parlar directament? Truca'ns per resoldre qualsevol dubte o coordinar una visita al teu habitatge o terreny.",
+    contact_call_btn: "Trucar al 622 03 27 04",
+    contact_call_hours_lbl: "Horari d'atenció",
+    contact_call_hours_val: "Dilluns a Divendres de 07:00 a 19:00 | Dissabtes de 09:00 a 14:00",
+    contact_email_title: "Correu Electrònic Oficial",
+    contact_email_desc: "Ideal per a l'enviament de projectes tècnics, plànols arquitectònics en PDF, plecs o mesuraments d'obra.",
+    contact_email_btn: "Enviar email amb plànols",
+    contact_onsite_title: "Treballem directament a domicili",
+    contact_onsite_badge: "Atenció a la teva obra o habitatge",
+    contact_onsite_desc:
+      "No disposem de botiga comercial ni oficina d'exposició oberta al públic. Javier Arévalo es desplaça personalment al teu habitatge, pis, local o terreny per prendre mesures exactes i preparar un pressupost a mida.",
+    contact_coverage_lbl: "Zona de desplaçament habitual",
+    contact_coverage_val: "El Vendrell, Santa Oliva, Calafell, Cunit, Bellvei, Albinyana, La Bisbal del Penedès i tota la comarca del Baix Penedès i Camp de Tarragona.",
+    contact_trust1: "Visita i pressupost 100% gratuïts i sense compromís",
+    contact_trust2: "Pressupost tancat per contracte sense sorpreses",
+    contact_trust3: "Assegurança de Responsabilitat Civil en vigor",
+    contact_fiscal_title: "Informació Fiscal i Registre Legal (LSSI / RGPD)",
+    contact_fiscal_desc:
+      "Domicili exclusivament fiscal i de notificació legal. No es realitzen visites comercials ni atenció en aquesta adreça; tota l'atenció es fa in situ a domicili o mitjançant trucada / WhatsApp.",
 
     // Footer
     footer_desc:
-      "Especialistes en reformes integrals, obra nova i rehabilitació amb la màxima qualitat i compromís. Construïm els teus somnis.",
+      "Empresa familiar de construcció i reformes a El Vendrell. 3a generació de paletes especialitzats en banys, cuines, terres, terrasses i reformes integrals amb la màxima qualitat i compromís.",
     footer_explore: "Explorar",
     footer_services: "Serveis",
     footer_contact: "Contacte",

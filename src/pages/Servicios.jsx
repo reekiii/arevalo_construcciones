@@ -9,26 +9,34 @@ function Servicios() {
     {
       title: t('s1_title'),
       desc: t('s1_desc'),
-      img: "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=800",
+      img: "/11.jpeg",
       features: lang === 'ca' 
-        ? ["Paleteria i enderrocs", "Lampisteria i electricitat", "Pladur i aïllaments", "Pintura i acabats"] 
-        : ["Albañilería y demolición", "Fontanería y electricidad", "Pladur y aislamientos", "Pintura y acabados"]
+        ? ["Canvi de banyera a plat de dutxa", "Enrajolats porcel·lànics", "Lampisteria i electricitat", "Mobiliari i aixetes"] 
+        : ["Cambio de bañera a ducha", "Alicatados porcelánicos", "Fontanería y electricidad", "Mobiliario y grifería"]
     },
     {
       title: t('s2_title'),
       desc: t('s2_desc'),
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
+      img: "/13.jpeg",
       features: lang === 'ca'
-        ? ["Fonamentació i estructura", "Assessorament tècnic", "Eficiència energètica", "Lliurament claus en mà"]
-        : ["Cimentación y estructura", "Asesoramiento técnico", "Eficiencia energética", "Entrega llave en mano"]
+        ? ["Paviments porcel·lànics i gres", "Nivellació de terres", "Impermeabilització de terrasses", "Patis i exteriors"]
+        : ["Pavimentos porcelánicos y gres", "Nivelación de suelos", "Impermeabilización de terrazas", "Patios y exteriores"]
     },
     {
       title: t('s3_title'),
       desc: t('s3_desc'),
-      img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800",
+      img: "/12.jpeg",
       features: lang === 'ca'
-        ? ["Restauració de façanes", "Reforços estructurals", "Impermeabilització", "Comunitats de propietaris"]
-        : ["Restauración de fachadas", "Refuerzos estructurales", "Impermeabilización", "Comunidades de propietarios"]
+        ? ["Coordinació de tots els oficis", "Paleteria, pladur i pintura", "Terminis tancats per contracte", "Gestió de llicències d'obra"]
+        : ["Coordinación de todos los oficios", "Albañilería, pladur y pintura", "Plazos cerrados por contrato", "Gestión de licencias de obra"]
+    },
+    {
+      title: t('s4_title'),
+      desc: t('s4_desc'),
+      img: "/22.jpeg",
+      features: lang === 'ca'
+        ? ["Habitatges unifamiliars", "Restauració de façanes", "Arranjament de cobertes", "Segur RC i garantia total"]
+        : ["Viviendas unifamiliares", "Restauración de fachadas", "Reparación de cubiertas", "Seguro RC y garantía total"]
     }
   ];
 
@@ -47,21 +55,21 @@ function Servicios() {
           </p>
         </div>
         
-        {/* Clean 3-column cards without button spam */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        {/* Clean 4-card 2x2 grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {services.map((srv, idx) => (
             <div 
               key={idx}
               className="bg-white rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 border border-stone-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="relative h-52 sm:h-56 overflow-hidden">
+                <div className="relative h-64 sm:h-72 overflow-hidden bg-stone-900">
                   <img 
                     src={srv.img} 
                     alt={srv.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
                   <span className="absolute bottom-4 left-5 text-white font-heading font-bold text-lg sm:text-xl drop-shadow">
                     {srv.title}
                   </span>

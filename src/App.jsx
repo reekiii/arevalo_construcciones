@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
+import LegalModal from './components/LegalModal';
 
 // Pages
 import Home from './pages/Home';
@@ -43,6 +44,7 @@ function App() {
       
       <Footer />
       <CookieBanner />
+      <LegalModal />
     </div>
   );
 }
