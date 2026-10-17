@@ -5,53 +5,69 @@ const FAQS_DATA = {
   es: [
     {
       q: '¿Hacéis visitas y presupuestos sin compromiso en El Vendrell y alrededores?',
-      a: 'Sí, 100% gratuito y sin ningún compromiso. Javier Arévalo se desplaza personalmente a tu vivienda, piso o terreno en El Vendrell, Calafell, Cunit, Santa Oliva, Baix Penedès, Valls, Tarragona o Barcelona para tomar medidas exactas y asesorarte sobre las mejores opciones técnicas y de materiales.'
+      a: 'Sí, de momento el desplazamiento a tu vivienda o terreno y el presupuesto es 100% gratuito y sin ningún compromiso. Javier Arévalo se desplaza personalmente para tomar medidas y valorar la obra in situ.'
     },
     {
-      q: '¿Cuánto tiempo se tarda en cambiar una bañera por plato de ducha?',
-      a: 'Normalmente entre 24 y 48 horas de trabajo efectivo. Retiramos la bañera antigua, saneamos y adaptamos las tomas de fontanería, impermeabilizamos la zona, instalamos el nuevo plato de ducha de resina antideslizante o ducha de obra a ras de suelo y alicatamos las paredes con acabado impecable.'
+      q: '¿En cuánto tiempo entregáis la valoración y presupuesto de la obra?',
+      a: 'En aproximadamente 1 semana entregamos el presupuesto con todas las faenas y partidas detalladas con la máxima claridad.'
     },
     {
-      q: '¿Cómo coordináis los diferentes oficios en una reforma integral?',
-      a: 'En Arévalo Construcciones ofrecemos un servicio "Llave en mano". Nosotros coordinamos directamente todos los gremios (albañilería, fontanería, electricidad, carpintería, pladur y pintura). Tú solo tratas con Javier Arévalo como único interlocutor responsable, con plazos de entrega firmados por contrato.'
+      q: '¿Cómo coordináis los diferentes oficios en una reforma integral ("Llave en mano")?',
+      a: 'Javier Arévalo se encarga de organizarlo y coordinarlo todo directamente: albañilería, fontanería, electricidad, carpintería, pladur y pintura. Tienes un solo interlocutor responsable y no tienes que preocuparte de buscar ni coordinar a nadie.'
     },
     {
-      q: '¿Qué garantías y seguros tenéis para las obras y reformas?',
-      a: 'Contamos con Seguro de Responsabilidad Civil profesional en vigor y ofrecemos garantía legal completa de 10 años en elementos estructurales (conforme a la Ley de Ordenación de la Edificación - LOE) y garantía en acabados. Trabajamos con contrato detallado partida por partida sin sobrecostes ocultos.'
+      q: '¿Hacéis trabajos pequeños y averías, o solo reformas completas?',
+      a: 'Hacemos todo tipo de faenas: desde pequeñas reparaciones y averías puntuales, hasta reformas de cuartos de baño, cocinas, colocación de suelos porcelánicos, terrazas, reformas integrales y obra nueva.'
     },
     {
-      q: '¿Cuál es vuestra forma de pago por fases?',
-      a: 'Para máxima seguridad y confianza mutua, el pago se realiza por fases de avance de obra: abono del material necesario para el inicio, 40% al comenzar los trabajos, 30% a mitad de ejecución y el 30% restante una vez finalizada la obra y revisada tu completa satisfacción.'
+      q: '¿El presupuesto es cerrado o pueden aparecer sobrecostes al final?',
+      a: 'Detallamos muy bien cada faena en el presupuesto para que no haya dudas. La confianza se basa en la claridad: si durante la obra surge un imprevisto o el cliente decide añadir una faena extra que no estaba en el presupuesto inicial, siempre se comenta y valora contigo antes de ejecutarla.'
     },
     {
-      q: '¿En qué zonas y municipios realizáis reformas habitualmente?',
-      a: 'Nuestra base operativa está en El Vendrell y actuamos habitualmente en toda la comarca del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), además de desplazarnos con frecuencia a Valls, Tarragona ciudad, Camp de Tarragona y la provincia de Barcelona.'
+      q: '¿Cómo se organiza la forma de pago de las obras?',
+      a: 'El pago se realiza con máxima seguridad por fases: abono del material necesario por adelantado para comenzar, 40% al inicio de los trabajos, 30% a mitad de obra y el 30% restante al finalizar cuando compruebes la calidad de los acabados.'
+    },
+    {
+      q: '¿Tenéis seguro en vigor y tramitáis las licencias en el ayuntamiento?',
+      a: 'Sí, contamos con Seguro de Responsabilidad Civil en vigor para total tranquilidad del cliente y nos encargamos de tramitar las licencias y permisos de obra en los ayuntamientos de la zona.'
+    },
+    {
+      q: '¿Hasta qué municipios y zonas os desplazáis habitualmente?',
+      a: 'Nuestra zona principal de trabajo es El Vendrell y los municipios del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), con cobertura máxima en Tarragona, Barcelona y Valls.'
     }
   ],
   ca: [
     {
       q: 'Feu visites i pressupostos sense compromís a El Vendrell i voltants?',
-      a: 'Sí, 100% gratuït i sense cap compromís. Javier Arévalo es desplaça personalment al teu habitatge, pis o terreny a El Vendrell, Calafell, Cunit, Santa Oliva, Baix Penedès, Valls, Tarragona o Barcelona per prendre mides exactes i assessorar-te sobre les millors opcions tècniques i de materials.'
+      a: 'Sí, de moment el desplaçament al teu habitatge o terreny i el pressupost és 100% gratuït i sense cap compromís. Javier Arévalo es desplaça personalment per prendre mides i valorar l\'obra in situ.'
     },
     {
-      q: 'Quant de temps es triga a canviar una banyera per plat de dutxa?',
-      a: 'Normalment entre 24 i 48 hores de feina efectiva. Retirem la banyera antiga, sanegem i adaptem les preses de lampisteria, impermeabilitzem la zona, instal·lem el nou plat de dutxa de resina antilliscant o dutxa d\'obra a ras de terra i enrajolem les parets amb acabat impecable.'
+      q: 'En quant de temps lliureu la valoració i pressupost de l\'obra?',
+      a: 'En aproximadament 1 setmana lliurem el pressupost amb totes les feines i partides detallades amb la màxima claredat.'
     },
     {
-      q: 'Com coordineu els diferents oficis en una reforma integral?',
-      a: 'A Arévalo Construcciones oferim un servei "Claus en mà". Nosaltres coordinem directament tots els gremis (paleteria, lampisteria, electricitat, fusteria, pladur i pintura). Tu només tractes amb Javier Arévalo com a únic interlocutor responsable, amb terminis de lliurament signats per contracte.'
+      q: 'Com coordineu els diferents oficis en una reforma integral ("Claus en mà")?',
+      a: 'Javier Arévalo s\'encarrega d\'organitzar-ho i coordinar-ho tot directament: paleteria, lampisteria, electricitat, fusteria, pladur i pintura. Tens un sol interlocutor responsable i no t\'has de preocupar de buscar ni coordinar ningú.'
     },
     {
-      q: 'Quines garanties i assegurances teniu per a les obres i reformes?',
-      a: 'Comptem amb Assegurança de Responsabilitat Civil professional en vigor i oferim garantia legal completa de 10 anys en elements estructurals (conforme a la Llei d\'Ordenació de l\'Edificació - LOE) i garantia en acabats. Treballem amb contracte detallat partida per partida sense sobrecostos ocults.'
+      q: 'Feu treballs petits i avaries, o només reformes completes?',
+      a: 'Fem tot tipus de feines: des de petites reparacions i avaries puntuals, fins a reformes de cambres de bany, cuines, col·locació de terres porcel·lànics, terrasses, reformes integrals i obra nova.'
     },
     {
-      q: 'Quina és la vostra forma de pagament per fases?',
-      a: 'Per a màxima seguretat i confiança mútua, el pagament es fa per fases d\'avanç d\'obra: abonament del material necessari per a l\'inici, 40% en començar els treballs, 30% a meitat d\'execució i el 30% restant un cop finalitzada l\'obra i revisada la teva completa satisfacció.'
+      q: 'El pressupost és tancat o poden aparèixer sobrecostos al final?',
+      a: 'Detallem molt bé cada feina en el pressupost perquè no hi hagi dubtes. La confiança es basa en la claredat: si durant l\'obra sorgeix un imprevist o el client decideix afegir una feina extra que no estava al pressupost inicial, sempre es comenta i es valora amb tu abans d\'executar-la.'
     },
     {
-      q: 'A quines zones i municipis realitzeu reformes habitualment?',
-      a: 'La nostra base operativa és a El Vendrell i actuem habitualment a tota la comarca del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), a més de desplaçar-nos amb freqüència a Valls, Tarragona ciutat, Camp de Tarragona i la província de Barcelona.'
+      q: 'Com s\'organitza la forma de pagament de les obres?',
+      a: 'El pagament es fa amb màxima seguretat per fases: abonament del material necessari per avançat per començar, 40% a l\'inici dels treballs, 30% a meitat d\'obra i el 30% restant en finalitzar quan comprovis la qualitat dels acabats.'
+    },
+    {
+      q: 'Teniu assegurança en vigor i tramiteu les llicències a l\'ajuntament?',
+      a: 'Sí, comptem amb Assegurança de Responsabilitat Civil en vigor per a total tranquil·litat del client i ens encarreguem de tramitar les llicències i permisos d\'obra als ajuntaments de la zona.'
+    },
+    {
+      q: 'A quins municipis i zones us desplaceu habitualment?',
+      a: 'La nostra zona principal de treball és El Vendrell i els municipis del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), amb cobertura màxima a Tarragona, Barcelona i Valls.'
     }
   ]
 };
