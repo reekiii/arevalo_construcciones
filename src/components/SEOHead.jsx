@@ -61,7 +61,16 @@ export default function SEOHead() {
 
   useEffect(() => {
     const pathname = location.pathname.toLowerCase();
-    const pageConfig = SEO_DATA[pathname] || SEO_DATA['/'];
+    const pageConfig = SEO_DATA[pathname] || {
+      es: {
+        title: '404 - Página no encontrada | Arévalo Construcciones',
+        desc: 'La página que buscas no existe o se ha movido. Vuelve al inicio de Arévalo Construcciones en El Vendrell.'
+      },
+      ca: {
+        title: '404 - Pàgina no trobada | Arévalo Construcciones',
+        desc: "La pàgina que busques no existeix o s'ha mogut. Torna a l'inici d'Arévalo Construcciones a El Vendrell."
+      }
+    };
     const activeLang = lang === 'ca' ? 'ca' : 'es';
     const currentSEO = pageConfig[activeLang] || pageConfig.es;
 

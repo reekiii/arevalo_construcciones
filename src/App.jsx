@@ -13,6 +13,7 @@ import Servicios from './pages/Servicios';
 import Proyectos from './pages/Proyectos';
 import Nosotros from './pages/Nosotros';
 import Contacto from './pages/Contacto';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
