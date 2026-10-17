@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import LegalModal from './components/LegalModal';
+import SEOHead from './components/SEOHead';
 
 // Pages
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ import Contacto from './pages/Contacto';
 function App() {
   return (
     <div className="min-h-screen bg-brand-bg font-body text-gray-800 flex flex-col">
+      <SEOHead />
       <ScrollToTop />
       <Navbar />
       

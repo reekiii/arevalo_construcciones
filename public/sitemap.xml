@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Página de Inicio -->
+  <url>
+    <loc>https://www.arevaloconstrucciones.com/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arevaloconstrucciones.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.arevaloconstrucciones.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arevaloconstrucciones.com/"/>
+  </url>
+
+  <!-- Servicios de Construcción y Reformas -->
+  <url>
+    <loc>https://www.arevaloconstrucciones.com/servicios</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arevaloconstrucciones.com/servicios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.arevaloconstrucciones.com/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arevaloconstrucciones.com/servicios"/>
+  </url>
+
+  <!-- Galería de Proyectos y Obras Realizadas -->
+  <url>
+    <loc>https://www.arevaloconstrucciones.com/proyectos</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arevaloconstrucciones.com/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.arevaloconstrucciones.com/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arevaloconstrucciones.com/proyectos"/>
+  </url>
+
+  <!-- Sobre Nosotros - 3ª Generación de Albañiles -->
+  <url>
+    <loc>https://www.arevaloconstrucciones.com/nosotros</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arevaloconstrucciones.com/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.arevaloconstrucciones.com/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arevaloconstrucciones.com/nosotros"/>
+  </url>
+
+  <!-- Contacto y Presupuesto Directo WhatsApp -->
+  <url>
+    <loc>https://www.arevaloconstrucciones.com/contacto</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.arevaloconstrucciones.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.arevaloconstrucciones.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.arevaloconstrucciones.com/contacto"/>
+  </url>
+</urlset>

@@ -66,7 +66,8 @@ function Servicios() {
                 <div className="relative h-64 sm:h-72 overflow-hidden bg-stone-900">
                   <img 
                     src={srv.img} 
-                    alt={srv.title} 
+                    alt={`${srv.title} - Arévalo Construcciones El Vendrell`} 
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>

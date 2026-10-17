@@ -196,7 +196,8 @@ function BeforeAfterSlider() {
               <div className="absolute inset-0">
                 <img 
                   src={currentProject.afterImage} 
-                  alt="Después de la reforma" 
+                  alt={lang === 'ca' ? `${currentProject.titleCa} - Després Arévalo` : `${currentProject.titleEs} - Después Arévalo`} 
+                  loading="lazy"
                   className="w-full h-full object-cover object-center pointer-events-none select-none" 
                   draggable="false"
                 />
@@ -216,7 +217,8 @@ function BeforeAfterSlider() {
               >
                 <img 
                   src={currentProject.beforeImage} 
-                  alt="Antes de la reforma" 
+                  alt={lang === 'ca' ? `${currentProject.titleCa} - Abans Arévalo` : `${currentProject.titleEs} - Antes Arévalo`} 
+                  loading="lazy"
                   className="w-full h-full object-cover object-center pointer-events-none select-none" 
                   draggable="false"
                 />

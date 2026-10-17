@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
+import FAQSection from "../components/FAQSection";
 
 function Home() {
   const { t } = useLanguage();
@@ -150,14 +151,16 @@ function Home() {
               <div className="relative overflow-hidden rounded-none shadow-xl transform hover:scale-[1.01] transition duration-500 border border-stone-300 aspect-[3/4] bg-stone-900">
                 <img
                   src="/22.jpeg"
-                  alt="Restauración de fachada con grúa Arévalo"
+                  alt="Restauración de fachada y rehabilitación en Baix Penedès - Arévalo Construcciones"
+                  loading="lazy"
                   className="w-full h-full object-cover object-center rounded-none block"
                 />
               </div>
               <div className="relative overflow-hidden rounded-none shadow-xl transform hover:scale-[1.01] transition duration-500 mt-6 sm:mt-8 md:mt-10 border border-stone-300 aspect-[3/4] bg-stone-900">
                 <img
                   src="/11.jpeg"
-                  alt="Reforma de baño y plato de ducha Arévalo"
+                  alt="Reforma de baño moderno con plato de ducha en El Vendrell - Arévalo Construcciones"
+                  loading="lazy"
                   className="w-full h-full object-cover object-center rounded-none block"
                 />
               </div>
@@ -181,9 +184,16 @@ function Home() {
           </div>
 
           <BeforeAfterSlider />
+        </div>
+      </section>
 
-          {/* Bloque "¿Preparado para empezar tu reforma?" con fondo beige y bordes rectos */}
-          <div className="mt-12 sm:mt-16 max-w-4xl mx-auto bg-brand-bg text-gray-800 rounded-none p-6 sm:p-10 md:p-12 text-center shadow-xl border border-stone-400/50 relative overflow-hidden">
+      {/* ===== PREGUNTAS FRECUENTES (FAQ + SCHEMA FAQPAGE SEO) ===== */}
+      <FAQSection />
+
+      {/* ===== LLAMADA A LA ACCIÓN FINAL ===== */}
+      <section className="py-12 sm:py-16 bg-brand-bg-alt border-t border-stone-300/60">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-brand-bg text-gray-800 rounded-none p-6 sm:p-10 md:p-12 text-center shadow-xl border border-stone-400/50 relative overflow-hidden">
             <h3 className="text-xl sm:text-3xl md:text-4xl font-heading font-extrabold text-brand-blue mb-3 leading-tight">
               {t('cta_title')}
             </h3>
