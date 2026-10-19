@@ -152,7 +152,7 @@ const translations = {
 
     // Footer
     footer_desc:
-      "Empresa familiar de construcción y reformas en El Vendrell. 3ª generación de albañiles especializados en baños, cocinas, suelos, terrazas y reformas integrales con la máxima calidad y compromiso.",
+      "Empresa familiar de construcción y reformas en El Vendrell. Cobertura en Baix y Alt Penedès, Garraf, Valls, Tarragona y Barcelona. 3ª generación de albañiles especializados en baños, cocinas y reformas integrales.",
     footer_explore: "Explorar",
     footer_services: "Servicios",
     footer_contact: "Contacto",
@@ -332,7 +332,7 @@ const translations = {
 
     // Footer
     footer_desc:
-      "Empresa familiar de construcció i reformes a El Vendrell. 3a generació de paletes especialitzats en banys, cuines, terres, terrasses i reformes integrals amb la màxima qualitat i compromís.",
+      "Empresa familiar de construcció i reformes a El Vendrell. Cobertura al Baix i Alt Penedès, Garraf, Valls, Tarragona i Barcelona. 3a generació de paletes especialitzats en banys, cuines i reformes integrals.",
     footer_explore: "Explorar",
     footer_services: "Serveis",
     footer_contact: "Contacte",
