@@ -142,7 +142,7 @@ const translations = {
     contact_onsite_desc:
       "No disponemos de tienda comercial ni oficina de exposición abierta al público. Javier Arévalo se desplaza personalmente a tu vivienda, piso, local o terreno en el Baix Penedès, Valls, Tarragona y provincia de Barcelona para tomar medidas exactas y preparar un presupuesto a tu medida.",
     contact_coverage_lbl: "Zona de desplazamiento habitual",
-    contact_coverage_val: "El Vendrell, Santa Oliva, Calafell, Cunit, Bellvei, Albinyana, La Bisbal del Penedès y comarca del Baix Penedès, con cobertura directa en Valls, Tarragona y área de Barcelona.",
+    contact_coverage_val: "El Vendrell, Calafell, Cunit, Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès y comarcas del Baix y Alt Penedès, con cobertura directa en Valls, Tarragona y área de Barcelona.",
     contact_trust1: "Visita y presupuesto 100% gratuitos y sin compromiso",
     contact_trust2: "Presupuesto cerrado por contrato sin sorpresas",
     contact_trust3: "Seguro de Responsabilidad Civil en vigor",
@@ -322,7 +322,7 @@ const translations = {
     contact_onsite_desc:
       "No disposem de botiga comercial ni oficina d'exposició oberta al públic. Javier Arévalo es desplaça personalment al teu habitatge, pis, local o terreny al Baix Penedès, Valls, Tarragona i província de Barcelona per prendre mesures exactes i preparar un pressupost a mida.",
     contact_coverage_lbl: "Zona de desplaçament habitual",
-    contact_coverage_val: "El Vendrell, Santa Oliva, Calafell, Cunit, Bellvei, Albinyana, La Bisbal del Penedès i comarca del Baix Penedès, amb cobertura directa a Valls, Tarragona i àrea de Barcelona.",
+    contact_coverage_val: "El Vendrell, Calafell, Cunit, Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès i comarques del Baix i Alt Penedès, amb cobertura directa a Valls, Tarragona i àrea de Barcelona.",
     contact_trust1: "Visita i pressupost 100% gratuïts i sense compromís",
     contact_trust2: "Pressupost tancat per contracte sense sorpreses",
     contact_trust3: "Assegurança de Responsabilitat Civil en vigor",

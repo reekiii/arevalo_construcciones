@@ -33,7 +33,7 @@ const FAQS_DATA = {
     },
     {
       q: '¿Hasta qué municipios y zonas os desplazáis habitualmente?',
-      a: 'Nuestra zona principal de trabajo es El Vendrell y los municipios del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), con cobertura máxima en Tarragona, Barcelona y Valls.'
+      a: 'Nuestra zona principal de trabajo es El Vendrell y los municipios del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), con desplazamientos habituales a Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Valls, Tarragona y la provincia de Barcelona.'
     }
   ],
   ca: [
@@ -67,7 +67,7 @@ const FAQS_DATA = {
     },
     {
       q: 'A quins municipis i zones us desplaceu habitualment?',
-      a: 'La nostra zona principal de treball és El Vendrell i els municipis del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), amb cobertura màxima a Tarragona, Barcelona i Valls.'
+      a: 'La nostra zona principal de treball és El Vendrell i els municipis del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), amb desplaçaments habituals a Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Valls, Tarragona i la província de Barcelona.'
     }
   ]
 };
