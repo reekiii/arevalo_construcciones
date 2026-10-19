@@ -247,35 +247,72 @@ function Contacto() {
         </div>
 
         {/* ============================================================== */}
-        {/* BANNER INSTAGRAM OFICIAL */}
+        {/* BANNERS: GOOGLE RESEÑAS + INSTAGRAM OFICIAL */}
         {/* ============================================================== */}
-        <div className="bg-gradient-to-r from-[#2e0854] via-[#4a1236] to-[#2e0854] text-white p-5 sm:p-6 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg border border-purple-900/50">
-          <div className="flex items-center gap-4 text-center sm:text-left">
-            <div className="w-12 h-12 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] rounded-none flex items-center justify-center flex-shrink-0 shadow-md">
-              <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </div>
-            <div>
-              <div className="font-heading font-extrabold text-base sm:text-lg">
-                {lang === 'ca' ? 'Segueix-nos a Instagram' : 'Síguenos en Instagram'}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10">
+          {/* Tarjeta Google Maps / Reseñas */}
+          <div className="bg-stone-900 text-white p-5 sm:p-6 flex flex-col justify-between gap-4 shadow-lg border border-stone-800 relative overflow-hidden">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-amber-400 text-stone-950 font-black text-xl rounded-none flex items-center justify-center flex-shrink-0 shadow-md">
+                ⭐
               </div>
-              <p className="text-xs sm:text-sm text-stone-300">
-                {lang === 'ca'
-                  ? 'Descobreix fotos i vídeos del dia a dia de les nostres obres a @construcciones_arevalo_'
-                  : 'Descubre fotos y vídeos del día a día de nuestras obras en @construcciones_arevalo_'}
-              </p>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-heading font-extrabold text-base sm:text-lg">
+                    {lang === 'ca' ? 'Ressenyes a Google' : 'Reseñas en Google'}
+                  </span>
+                  <span className="bg-amber-400/20 text-amber-300 text-[10px] font-heading font-bold px-2 py-0.5 border border-amber-400/40 uppercase">
+                    5.0 ★★★★★
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  {lang === 'ca'
+                    ? 'Has fet una reforma amb nosaltres? La teva opinió ens ajuda a continuar creixent com a empresa familiar.'
+                    : '¿Has hecho una reforma con nosotros? Tu opinión en Google nos ayuda a seguir creciendo como empresa familiar.'}
+                </p>
+              </div>
             </div>
+            <a
+              href="https://g.page/r/CeSCdIVSlsgGEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-stone-950 font-heading font-bold py-2.5 px-5 text-xs uppercase tracking-wider shadow-md transition w-full sm:w-auto self-start"
+            >
+              <span>⭐</span>
+              <span>{lang === 'ca' ? 'Deixar una ressenya a Google' : 'Dejar una reseña en Google'}</span>
+              <span>→</span>
+            </a>
           </div>
-          <a
-            href="https://www.instagram.com/construcciones_arevalo_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-stone-100 font-heading font-bold py-2.5 px-6 text-xs uppercase tracking-wider shadow-md transition flex-shrink-0"
-          >
-            <span>{lang === 'ca' ? 'Veure perfil' : 'Ver perfil'}</span>
-            <span>→</span>
-          </a>
+
+          {/* Tarjeta Instagram Oficial */}
+          <div className="bg-gradient-to-r from-[#2e0854] via-[#4a1236] to-[#2e0854] text-white p-5 sm:p-6 flex flex-col justify-between gap-4 shadow-lg border border-purple-900/50">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] rounded-none flex items-center justify-center flex-shrink-0 shadow-md">
+                <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <div>
+                <div className="font-heading font-extrabold text-base sm:text-lg mb-1">
+                  {lang === 'ca' ? 'Segueix-nos a Instagram' : 'Síguenos en Instagram'}
+                </div>
+                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  {lang === 'ca'
+                    ? 'Descobreix fotos i vídeos del dia a dia de les nostres obres a @construcciones_arevalo_'
+                    : 'Descubre fotos y vídeos del día a día de nuestras obras en @construcciones_arevalo_'}
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.instagram.com/construcciones_arevalo_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 hover:bg-stone-100 font-heading font-bold py-2.5 px-5 text-xs uppercase tracking-wider shadow-md transition w-full sm:w-auto self-start"
+            >
+              <span>{lang === 'ca' ? 'Veure perfil' : 'Ver perfil'}</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
         {/* ============================================================== */}
