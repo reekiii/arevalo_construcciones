@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
+import ReviewsSection from "../components/ReviewsSection";
 import FAQSection from "../components/FAQSection";
 
 function Home() {
@@ -186,6 +187,9 @@ function Home() {
           <BeforeAfterSlider />
         </div>
       </section>
+
+      {/* ===== OPINIONES REALES EN GOOGLE MAPS (5 ESTRELLAS) ===== */}
+      <ReviewsSection />
 
       {/* ===== PREGUNTAS FRECUENTES (FAQ + SCHEMA FAQPAGE SEO) ===== */}
       <FAQSection />

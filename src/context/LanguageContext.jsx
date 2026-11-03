@@ -32,6 +32,21 @@ const translations = {
     ba_before: "ANTES",
     ba_after: "DESPUÉS",
 
+    // Reseñas Google
+    reviews_badge: "Opiniones reales en Google",
+    reviews_title: "Lo que dicen quienes ya han confiado en nosotros",
+    reviews_desc:
+      "Reseñas reales y 100% verificadas en Google Maps de vecinos y propietarios de El Vendrell, Baix Penedès y Tarragona. Máximo mimo, seriedad en los plazos y trato de confianza.",
+    reviews_score_lbl: "Puntuación en Google",
+    reviews_count_lbl: "5 opiniones verificadas en Google",
+    reviews_satisfaction: "100% clientes satisfechos",
+    reviews_btn_google: "Ver perfil en Google Maps",
+    reviews_leave_review_title: "¿Has hecho una reforma u obra con nosotros?",
+    reviews_leave_review_desc:
+      "Tu opinión en Google ayuda a otros vecinos a encontrar un albañil de confianza y nos motiva a seguir trabajando con el mismo mimo de siempre.",
+    reviews_leave_review_btn: "Dejar una reseña en Google",
+    reviews_verified_badge: "Reseña verificada en Google",
+
     // Quienes Somos Home
     about_title: "Tu proyecto, en las mejores manos.",
     about_p1:
@@ -211,6 +226,21 @@ const translations = {
       "Llisca per veure la transformació completa abans i després dels treballs.",
     ba_before: "ABANS",
     ba_after: "DESPRÉS",
+
+    // Ressenyes Google
+    reviews_badge: "Opinions reals a Google",
+    reviews_title: "El que diuen els qui ja han confiat en nosaltres",
+    reviews_desc:
+      "Ressenyes reals i 100% verificades a Google Maps de veïns i propietaris del Vendrell, Baix Penedès i Tarragona. Màxima cura pels detalls, compliment de terminis i tracte de confiança.",
+    reviews_score_lbl: "Puntuació a Google",
+    reviews_count_lbl: "5 opinions verificades a Google",
+    reviews_satisfaction: "100% clients satisfets",
+    reviews_btn_google: "Veure perfil a Google Maps",
+    reviews_leave_review_title: "Has fet una reforma o obra amb nosaltres?",
+    reviews_leave_review_desc:
+      "La teva opinió a Google ajuda altres veïns a trobar un paleta de confiança i ens motiva a continuar treballant amb la mateixa cura de sempre.",
+    reviews_leave_review_btn: "Deixar una ressenya a Google",
+    reviews_verified_badge: "Ressenya verificada a Google",
 
     // Quienes Somos Home
     about_title: "El teu projecte, en les millors mans.",
