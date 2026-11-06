@@ -10,20 +10,20 @@ const routes = [
   {
     path: 'servicios',
     canonical: 'https://www.arevaloconstrucciones.com/servicios',
-    title: 'Servicios de Reformas y Construcción en El Vendrell | Arévalo Construcciones',
-    description: 'Especialistas en reformas de baños, cambio de bañera por plato de ducha, reformas de cocinas, suelos porcelánicos y reformas integrales en Baix Penedès, Valls y Tarragona.',
+    title: 'Servicios de Reformas y Construcción | Arévalo Construcciones El Vendrell',
+    description: 'Especialistas en reformas de baños, cambio de bañera por plato de ducha, reformas de cocinas, suelos porcelánicos y reformas integrales en Baix Penedès, Tarragona y Barcelona.',
   },
   {
     path: 'proyectos',
     canonical: 'https://www.arevaloconstrucciones.com/proyectos',
     title: 'Proyectos y Obras Realizadas | Arévalo Construcciones El Vendrell',
-    description: 'Galería de trabajos reales de reformas de baños, platos de ducha de obra, piscinas, terrazas y cubiertas en El Vendrell y Baix Penedès. Calidad garantizada.',
+    description: 'Galería de trabajos reales de reformas de baños, platos de ducha de obra, piscinas, terrazas y cubiertas en El Vendrell, Baix Penedès y Tarragona. Calidad garantizada.',
   },
   {
     path: 'nosotros',
     canonical: 'https://www.arevaloconstrucciones.com/nosotros',
-    title: 'Sobre Nosotros | 3ª Generación de Albañiles | Arévalo Construcciones',
-    description: 'Conoce a Javier Arévalo y nuestra tradición familiar de 3 generaciones de albañiles en El Vendrell. Presupuestos cerrados, garantía por contrato y seguro de RC en vigor.',
+    title: 'Sobre Nosotros | 3ª Generación de Albañiles | Arévalo Construcciones El Vendrell',
+    description: 'Conoce a Javier Arévalo y nuestra tradición familiar de 3 generaciones de albañiles en El Vendrell. Presupuestos cerrados, garantía por contrato y seguro de RC en vigor en Tarragona y Barcelona.',
   },
   {
     path: 'contacto',

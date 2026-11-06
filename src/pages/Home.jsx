@@ -37,9 +37,15 @@ function Home() {
             {t('hero_title')}
           </h1>
 
-          <p className="text-base sm:text-xl max-w-2xl text-stone-200 mb-8 sm:mb-10 font-normal leading-relaxed drop-shadow text-left">
+          <p className="text-base sm:text-xl max-w-2xl text-stone-200 mb-6 font-normal leading-relaxed drop-shadow text-left">
             {t('hero_desc')}
           </p>
+
+          {/* Badge de ámbito geográfico de actuación */}
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/25 backdrop-blur-md px-3.5 py-1.5 mb-8 text-xs sm:text-sm text-stone-200 font-heading font-medium">
+            <span className="text-emerald-400">📍</span>
+            <span>{t('hero_area_badge')}</span>
+          </div>
 
           <div className="flex flex-col sm:flex-row space-y-3.5 sm:space-y-0 sm:space-x-4 w-full sm:w-auto mb-10 sm:mb-12">
             <Link

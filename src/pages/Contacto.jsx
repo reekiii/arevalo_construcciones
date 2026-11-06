@@ -9,36 +9,36 @@ function Contacto() {
       id: 'bano',
       icon: '🚿',
       label: t('contact_wa_opt1'),
-      textEs: 'Hola Javier, me gustaría pedir información y presupuesto para reformar un baño / plato de ducha.',
-      textCa: 'Hola Javier, m\'agradaria demanar informació i pressupost per a reformar un bany / plat de dutxa.'
+      textEs: 'Hola Javier, me gustaría pedir presupuesto para reformar un baño en (indica tu población): ',
+      textCa: 'Hola Javier, vull demanar pressupost per a reformar un bany a (indica la teva població): '
     },
     {
       id: 'cocina',
       icon: '🍳',
       label: t('contact_wa_opt2'),
-      textEs: 'Hola Javier, quiero pedir presupuesto para una reforma de cocina.',
-      textCa: 'Hola Javier, vull demanar pressupost per a una reforma de cuina.'
+      textEs: 'Hola Javier, quiero pedir presupuesto para una reforma de cocina en (indica tu población): ',
+      textCa: 'Hola Javier, vull demanar pressupost per a una reforma de cuina a (indica la teva població): '
     },
     {
       id: 'integral',
       icon: '🏡',
       label: t('contact_wa_opt3'),
-      textEs: 'Hola Javier, tengo un proyecto de reforma integral y quiero coordinar una visita técnica a la vivienda.',
-      textCa: 'Hola Javier, tinc un projecte de reforma integral i vull coordinar una visita tècnica a l\'habitatge.'
+      textEs: 'Hola Javier, tengo un proyecto de reforma integral en (indica tu población): ',
+      textCa: 'Hola Javier, tinc un projecte de reforma integral a (indica la teva població): '
     },
     {
       id: 'exterior',
       icon: '🧱',
       label: t('contact_wa_opt4'),
-      textEs: 'Hola Javier, quiero presupuesto para suelos / terraza exterior / impermeabilización.',
-      textCa: 'Hola Javier, vull pressupost per a terres / terrassa exterior / impermeabilització.'
+      textEs: 'Hola Javier, quiero presupuesto para suelos / terraza en (indica tu población): ',
+      textCa: 'Hola Javier, vull pressupost per a terres / terrassa a (indica la teva població): '
     },
     {
       id: 'general',
       icon: '💬',
       label: t('contact_wa_opt5'),
-      textEs: 'Hola Javier, me pongo en contacto desde tu web para hacerte una consulta de obra.',
-      textCa: 'Hola Javier, em poso en contacte des del teu web per fer-te una consulta d\'obra.'
+      textEs: 'Hola Javier, te escribo desde la web para una consulta de obra en (indica tu población): ',
+      textCa: 'Hola Javier, t\'escric des del web per a una consulta d\'obra a (indica la teva població): '
     }
   ];
 

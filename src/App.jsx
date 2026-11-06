@@ -35,7 +35,7 @@ function App() {
 
       {/* Botón flotante de WhatsApp global */}
       <a 
-        href="https://wa.me/34622032704?text=Hola,%20me%20gustaría%20pedir%20un%20presupuesto" 
+        href="https://wa.me/34622032704?text=Hola%20Javier,%20me%20gustar%C3%ADa%20pedir%20presupuesto%20para%20una%20reforma%20en%20(indica%20tu%20poblaci%C3%B3n):%20" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#25D366] text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition duration-300 z-50 transform hover:scale-110"

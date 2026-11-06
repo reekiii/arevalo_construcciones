@@ -14,6 +14,7 @@ const translations = {
     hero_title: "Materializamos tus grandes ideas.",
     hero_desc:
       "Desde pequeñas reformas hasta grandes obras de nueva construcción. En Arévalo Construcciones ofrecemos un servicio integral, transparente y de máxima calidad adaptado a tus necesidades y presupuesto.",
+    hero_area_badge: "Zona de actuación: El Vendrell · Baix Penedès · Tarragona · Barcelona",
     hero_btn_quote: "Solicitar Presupuesto",
     hero_btn_services: "Ver Servicios",
 
@@ -209,6 +210,7 @@ const translations = {
     hero_title: "Fem realitat les teves grans idees.",
     hero_desc:
       "Des de petites reformes fins a grans obres de nova construcció. A Arévalo Construcciones oferim un servei integral, transparent i de màxima qualitat adaptat a les teves necessitats i pressupost.",
+    hero_area_badge: "Àmbit d'actuació: El Vendrell · Baix Penedès · Tarragona · Barcelona",
     hero_btn_quote: "Sol·licitar Pressupost",
     hero_btn_services: "Veure Serveis",
 

@@ -5,12 +5,12 @@ import { useLanguage } from '../context/LanguageContext';
 const SEO_DATA = {
   '/': {
     es: {
-      title: 'Arévalo Construcciones | Reformas en El Vendrell, Sitges, Vilafranca y Tarragona',
-      desc: 'Empresa de construcción y reformas en El Vendrell, Sitges, Vilafranca del Penedès, Cubelles y Tarragona. 3ª generación de albañiles. Especialistas en reformas de baños, cocinas y reformas integrales.'
+      title: 'Arévalo Construcciones El Vendrell | Reformas en Baix Penedès, Tarragona y Barcelona',
+      desc: 'Empresa de construcción y reformas en El Vendrell, Baix Penedès, Sitges, Vilafranca, Tarragona y Barcelona. 3ª generación de albañiles. Especialistas en reformas de baños, cocinas y reformas integrales.'
     },
     ca: {
-      title: 'Arévalo Construcciones | Reformes a El Vendrell, Sitges, Vilafranca i Tarragona',
-      desc: 'Empresa de construcció i reformes a El Vendrell, Sitges, Vilafranca del Penedès, Cubelles i Tarragona. 3a generació de paletes. Especialistes en reformes de banys, cuines i reformes integrals.'
+      title: 'Arévalo Construcciones El Vendrell | Reformes a Baix Penedès, Tarragona i Barcelona',
+      desc: 'Empresa de construcció i reformes al Vendrell, Baix Penedès, Sitges, Vilafranca, Tarragona i Barcelona. 3a generació de paletes. Especialistes en reformes de banys, cuines i reformes integrals.'
     }
   },
   '/servicios': {

@@ -22,7 +22,18 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all">
+    <header className="sticky top-0 z-50 transition-all">
+      {/* Top Banner Territorial */}
+      <div className="bg-brand-blue text-white text-[11px] sm:text-xs py-1.5 px-4 font-heading font-medium tracking-wide text-center flex items-center justify-center gap-2 border-b border-white/10">
+        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>
+          {lang === 'ca'
+            ? '📍 Servei exclusiu a Tarragona, Baix Penedès, Garraf i Barcelona'
+            : '📍 Servicio exclusivo en Tarragona, Baix Penedès, Garraf y Barcelona'}
+        </span>
+      </div>
+
+      <nav className="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           
@@ -221,6 +232,7 @@ function Navbar() {
         </div>
       )}
     </nav>
+    </header>
   );
 }
 
