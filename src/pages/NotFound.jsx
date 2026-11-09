@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function NotFound() {
-  const { lang } = useLanguage();
+  const { lang, lp } = useLanguage();
   const isCa = lang === 'ca';
 
   return (
@@ -40,7 +40,7 @@ export default function NotFound() {
         {/* Botones de Acción */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-10">
           <Link
-            to="/"
+            to={lp('/')}
             className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-8 rounded-none shadow-lg transition duration-300 transform hover:-translate-y-0.5 text-xs sm:text-sm uppercase tracking-wider text-center"
           >
             {isCa ? '🏠 Tornar a l\'Inici' : '🏠 Volver al Inicio'}
@@ -65,19 +65,19 @@ export default function NotFound() {
             {isCa ? 'O navega directament a:' : 'O navega directamente a:'}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-semibold text-brand-blue">
-            <Link to="/servicios" className="hover:text-brand-accent transition">
+            <Link to={lp('/servicios')} className="hover:text-brand-accent transition">
               {isCa ? 'Serveis' : 'Servicios'}
             </Link>
             <span className="text-stone-300">•</span>
-            <Link to="/proyectos" className="hover:text-brand-accent transition">
+            <Link to={lp('/proyectos')} className="hover:text-brand-accent transition">
               {isCa ? 'Projectes' : 'Proyectos'}
             </Link>
             <span className="text-stone-300">•</span>
-            <Link to="/nosotros" className="hover:text-brand-accent transition">
+            <Link to={lp('/nosotros')} className="hover:text-brand-accent transition">
               {isCa ? 'Nosaltres' : 'Nosotros'}
             </Link>
             <span className="text-stone-300">•</span>
-            <Link to="/contacto" className="hover:text-brand-accent transition">
+            <Link to={lp('/contacto')} className="hover:text-brand-accent transition">
               {isCa ? 'Contacte' : 'Contacto'}
             </Link>
           </div>

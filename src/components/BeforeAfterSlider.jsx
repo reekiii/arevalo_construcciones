@@ -358,7 +358,7 @@ function BeforeAfterSlider() {
             {/* Enlace secundario para explorar más obras en la galería */}
             <div className="pt-1">
               <a
-                href="/proyectos"
+                href={lang === 'ca' ? '/ca/proyectos' : '/proyectos'}
                 className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-stone-600 hover:text-brand-blue uppercase tracking-wider transition group"
               >
                 <span>{lang === 'ca' ? 'Veure més projectes a la galeria' : 'Ver más proyectos en la galería'}</span>

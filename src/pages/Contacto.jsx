@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 function Contacto() {
-  const { t, lang } = useLanguage();
+  const { t, lang, lp } = useLanguage();
 
   const presets = [
     {
@@ -416,6 +417,12 @@ function Contacto() {
               </div>
               <p className="text-xs sm:text-sm text-gray-800 font-medium leading-relaxed">
                 {t('contact_coverage_val')}
+              </p>
+              <p className="text-xs text-gray-700 mt-2">
+                <strong>{lang === 'ca' ? 'Només treballem a Catalunya.' : 'Solo trabajamos en Cataluña.'}</strong>{' '}
+                <Link to={lp('/zonas')} className="text-brand-blue font-bold hover:underline">
+                  {lang === 'ca' ? 'Veure zones →' : 'Ver zonas →'}
+                </Link>
               </p>
             </div>
           </div>

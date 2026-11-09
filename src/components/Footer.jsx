@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 function Footer() {
-  const { t } = useLanguage();
+  const { t, lp } = useLanguage();
 
   return (
     <footer className="bg-[#0F172A] text-brand-light py-12 md:py-16 border-t border-stone-800">
@@ -61,11 +61,12 @@ function Footer() {
           <div className="md:col-span-1">
             <h4 className="text-brand-accent font-heading font-bold mb-4 uppercase tracking-wider text-sm">{t('footer_explore')}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link to="/" className="hover:text-brand-accent transition">{t('nav_home')}</Link></li>
-              <li><Link to="/servicios" className="hover:text-brand-accent transition">{t('nav_services')}</Link></li>
-              <li><Link to="/proyectos" className="hover:text-brand-accent transition">{t('nav_projects')}</Link></li>
-              <li><Link to="/nosotros" className="hover:text-brand-accent transition">{t('nav_about')}</Link></li>
-              <li><Link to="/contacto" className="hover:text-brand-accent transition">{t('nav_contact')}</Link></li>
+              <li><Link to={lp('/')} className="hover:text-brand-accent transition">{t('nav_home')}</Link></li>
+              <li><Link to={lp('/servicios')} className="hover:text-brand-accent transition">{t('nav_services')}</Link></li>
+              <li><Link to={lp('/proyectos')} className="hover:text-brand-accent transition">{t('nav_projects')}</Link></li>
+              <li><Link to={lp('/nosotros')} className="hover:text-brand-accent transition">{t('nav_about')}</Link></li>
+              <li><Link to={lp('/contacto')} className="hover:text-brand-accent transition">{t('nav_contact')}</Link></li>
+              <li><Link to={lp('/zonas')} className="hover:text-brand-accent transition">{t('nav_zones')}</Link></li>
             </ul>
           </div>
 
@@ -73,9 +74,9 @@ function Footer() {
           <div className="md:col-span-1">
             <h4 className="text-brand-accent font-heading font-bold mb-4 uppercase tracking-wider text-sm">{t('footer_services')}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link to="/servicios" className="hover:text-brand-accent transition">{t('s1_title')}</Link></li>
-              <li><Link to="/servicios" className="hover:text-brand-accent transition">{t('s2_title')}</Link></li>
-              <li><Link to="/servicios" className="hover:text-brand-accent transition">{t('s3_title')}</Link></li>
+              <li><Link to={lp('/servicios')} className="hover:text-brand-accent transition">{t('s1_title')}</Link></li>
+              <li><Link to={lp('/servicios')} className="hover:text-brand-accent transition">{t('s2_title')}</Link></li>
+              <li><Link to={lp('/servicios')} className="hover:text-brand-accent transition">{t('s3_title')}</Link></li>
             </ul>
           </div>
 

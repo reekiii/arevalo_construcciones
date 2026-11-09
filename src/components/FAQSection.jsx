@@ -34,6 +34,10 @@ const FAQS_DATA = {
     {
       q: '¿Hasta qué municipios y zonas os desplazáis habitualmente?',
       a: 'Nuestra zona principal de trabajo es El Vendrell y los municipios del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), con desplazamientos habituales a Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Valls, Tarragona y la provincia de Barcelona.'
+    },
+    {
+      q: '¿Trabajáis en Madrid, Castilla y León o en el municipio de Arévalo (Ávila)?',
+      a: 'No. Arévalo es el apellido de la familia, no nuestra ubicación. Somos una empresa de El Vendrell (Tarragona) y solo realizamos obras en Cataluña: Baix Penedès, Garraf, Alt Penedès, Camp de Tarragona y provincia de Barcelona. No aceptamos trabajos fuera de Cataluña.'
     }
   ],
   ca: [
@@ -68,6 +72,10 @@ const FAQS_DATA = {
     {
       q: 'A quins municipis i zones us desplaceu habitualment?',
       a: 'La nostra zona principal de treball és El Vendrell i els municipis del Baix Penedès (Calafell, Cunit, Santa Oliva, Bellvei, Albinyana, La Bisbal del Penedès), amb desplaçaments habituals a Cubelles, Sitges, Vilanova i la Geltrú, Vilafranca del Penedès, Valls, Tarragona i la província de Barcelona.'
+    },
+    {
+      q: 'Treballeu a Madrid, Castella i Lleó o al municipi d’Arévalo (Àvila)?',
+      a: 'No. Arévalo és el cognom de la família, no la nostra ubicació. Som una empresa del Vendrell (Tarragona) i només fem obres a Catalunya: Baix Penedès, Garraf, Alt Penedès, Camp de Tarragona i província de Barcelona. No acceptem treballs fora de Catalunya.'
     }
   ]
 };

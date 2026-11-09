@@ -36,6 +36,7 @@ function CookieBanner() {
   const handleAcceptAll = () => {
     const consent = { technical: true, analytics: true, timestamp: Date.now() };
     localStorage.setItem('arevalo_cookies', JSON.stringify(consent));
+    window.dispatchEvent(new Event('arevalo-consent-changed'));
     setAnalyticsEnabled(true);
     setIsVisible(false);
     setShowModal(false);
@@ -44,6 +45,7 @@ function CookieBanner() {
   const handleAcceptEssential = () => {
     const consent = { technical: true, analytics: false, timestamp: Date.now() };
     localStorage.setItem('arevalo_cookies', JSON.stringify(consent));
+    window.dispatchEvent(new Event('arevalo-consent-changed'));
     setAnalyticsEnabled(false);
     setIsVisible(false);
     setShowModal(false);
@@ -52,6 +54,7 @@ function CookieBanner() {
   const handleSavePreferences = () => {
     const consent = { technical: true, analytics: analyticsEnabled, timestamp: Date.now() };
     localStorage.setItem('arevalo_cookies', JSON.stringify(consent));
+    window.dispatchEvent(new Event('arevalo-consent-changed'));
     setIsVisible(false);
     setShowModal(false);
   };

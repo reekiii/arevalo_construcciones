@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const translations = {
   es: {
@@ -8,13 +9,15 @@ const translations = {
     nav_projects: "Proyectos",
     nav_about: "Nosotros",
     nav_contact: "Contacto",
+    nav_zones: "Zonas donde trabajamos",
+    nav_zones_short: "Zonas",
 
     // Hero
     hero_tagline: "Arévalo Construcciones",
-    hero_title: "Materializamos tus grandes ideas.",
+    hero_title: "Reformas y construcción en El Vendrell y el Baix Penedès",
     hero_desc:
-      "Desde pequeñas reformas hasta grandes obras de nueva construcción. En Arévalo Construcciones ofrecemos un servicio integral, transparente y de máxima calidad adaptado a tus necesidades y presupuesto.",
-    hero_area_badge: "Zona de actuación: El Vendrell · Baix Penedès · Tarragona · Barcelona",
+      "Materializamos tus grandes ideas: desde pequeñas reformas hasta grandes obras de nueva construcción. En Arévalo Construcciones ofrecemos un servicio integral, transparente y de máxima calidad adaptado a tus necesidades y presupuesto.",
+    hero_area_badge: "Solo trabajamos en Cataluña: El Vendrell · Baix Penedès · Garraf · Tarragona",
     hero_btn_quote: "Solicitar Presupuesto",
     hero_btn_services: "Ver Servicios",
 
@@ -168,7 +171,7 @@ const translations = {
 
     // Footer
     footer_desc:
-      "Empresa familiar de construcción y reformas en El Vendrell. Cobertura en Baix y Alt Penedès, Garraf, Valls, Tarragona y Barcelona. 3ª generación de albañiles especializados en baños, cocinas y reformas integrales.",
+      "Empresa familiar de construcción y reformas en El Vendrell. Cobertura en Baix y Alt Penedès, Garraf, Valls, Tarragona y Barcelona. 3ª generación de albañiles especializados en baños, cocinas y reformas integrales. Solo trabajamos en Cataluña.",
     footer_explore: "Explorar",
     footer_services: "Servicios",
     footer_contact: "Contacto",
@@ -204,13 +207,15 @@ const translations = {
     nav_projects: "Projectes",
     nav_about: "Nosaltres",
     nav_contact: "Contacte",
+    nav_zones: "Zones on treballem",
+    nav_zones_short: "Zones",
 
     // Hero
     hero_tagline: "Arévalo Construcciones",
-    hero_title: "Fem realitat les teves grans idees.",
+    hero_title: "Reformes i construcció al Vendrell i el Baix Penedès",
     hero_desc:
-      "Des de petites reformes fins a grans obres de nova construcció. A Arévalo Construcciones oferim un servei integral, transparent i de màxima qualitat adaptat a les teves necessitats i pressupost.",
-    hero_area_badge: "Àmbit d'actuació: El Vendrell · Baix Penedès · Tarragona · Barcelona",
+      "Fem realitat les teves grans idees: des de petites reformes fins a grans obres de nova construcció. A Arévalo Construcciones oferim un servei integral, transparent i de màxima qualitat adaptat a les teves necessitats i pressupost.",
+    hero_area_badge: "Només treballem a Catalunya: El Vendrell · Baix Penedès · Garraf · Tarragona",
     hero_btn_quote: "Sol·licitar Pressupost",
     hero_btn_services: "Veure Serveis",
 
@@ -364,7 +369,7 @@ const translations = {
 
     // Footer
     footer_desc:
-      "Empresa familiar de construcció i reformes a El Vendrell. Cobertura al Baix i Alt Penedès, Garraf, Valls, Tarragona i Barcelona. 3a generació de paletes especialitzats en banys, cuines i reformes integrals.",
+      "Empresa familiar de construcció i reformes a El Vendrell. Cobertura al Baix i Alt Penedès, Garraf, Valls, Tarragona i Barcelona. 3a generació de paletes especialitzats en banys, cuines i reformes integrals. Només treballem a Catalunya.",
     footer_explore: "Explorar",
     footer_services: "Serveis",
     footer_contact: "Contacte",
@@ -396,22 +401,42 @@ const translations = {
 
 const LanguageContext = createContext();
 
+// El idioma lo decide la URL: /ca/... = català, el resto = castellano.
+// Así Google puede indexar ambas versiones por separado (hreflang).
+export function stripLangPrefix(pathname) {
+  if (pathname === "/ca" || pathname === "/ca/") return "/";
+  if (pathname.startsWith("/ca/")) return pathname.slice(3);
+  return pathname;
+}
+
+export function localizedPath(path, lang) {
+  const base = stripLangPrefix(path);
+  if (lang !== "ca") return base;
+  return base === "/" ? "/ca" : `/ca${base}`;
+}
+
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => {
-    return localStorage.getItem("arevalo_lang") || "es";
-  });
+  const location = useLocation();
+  const navigate = useNavigate();
+  const lang = location.pathname === "/ca" || location.pathname.startsWith("/ca/") ? "ca" : "es";
 
   const changeLanguage = (newLang) => {
-    setLang(newLang);
-    localStorage.setItem("arevalo_lang", newLang);
+    try {
+      localStorage.setItem("arevalo_lang", newLang);
+    } catch {
+      // almacenamiento no disponible
+    }
+    navigate(localizedPath(location.pathname, newLang) + location.search + location.hash);
   };
 
   const t = (key) => {
     return translations[lang]?.[key] || translations["es"]?.[key] || key;
   };
 
+  const lp = (path) => localizedPath(path, lang);
+
   return (
-    <LanguageContext.Provider value={{ lang, changeLanguage, t }}>
+    <LanguageContext.Provider value={{ lang, changeLanguage, t, lp }}>
       {children}
     </LanguageContext.Provider>
   );

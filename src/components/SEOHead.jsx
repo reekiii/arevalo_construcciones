@@ -1,113 +1,89 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage, stripLangPrefix } from '../context/LanguageContext';
+import { getSeo, urlFor } from '../data/seo.js';
+import { trackPageView } from '../lib/analytics.js';
 
-const SEO_DATA = {
-  '/': {
-    es: {
-      title: 'Arévalo Construcciones El Vendrell | Reformas en Baix Penedès, Tarragona y Barcelona',
-      desc: 'Empresa de construcción y reformas en El Vendrell, Baix Penedès, Sitges, Vilafranca, Tarragona y Barcelona. 3ª generación de albañiles. Especialistas en reformas de baños, cocinas y reformas integrales.'
-    },
-    ca: {
-      title: 'Arévalo Construcciones El Vendrell | Reformes a Baix Penedès, Tarragona i Barcelona',
-      desc: 'Empresa de construcció i reformes al Vendrell, Baix Penedès, Sitges, Vilafranca, Tarragona i Barcelona. 3a generació de paletes. Especialistes en reformes de banys, cuines i reformes integrals.'
-    }
+const NOT_FOUND = {
+  es: {
+    title: '404 - Página no encontrada | Arévalo Construcciones',
+    desc: 'La página que buscas no existe o se ha movido. Vuelve al inicio de Arévalo Construcciones en El Vendrell.'
   },
-  '/servicios': {
-    es: {
-      title: 'Servicios de Reformas y Construcción en El Vendrell | Arévalo Construcciones',
-      desc: 'Especialistas en reformas de baños, cambio de bañera por plato de ducha, reformas de cocinas, suelos porcelánicos y reformas integrales en Baix Penedès, Valls y Tarragona.'
-    },
-    ca: {
-      title: 'Serveis de Reformes i Construcció a El Vendrell | Arévalo Construcciones',
-      desc: 'Especialistes en reformes de banys, canvi de banyera per plat de dutxa, reformes de cuines, terres porcel·lànics i reformes integrals al Baix Penedès, Valls i Tarragona.'
-    }
-  },
-  '/proyectos': {
-    es: {
-      title: 'Proyectos y Obras Realizadas | Arévalo Construcciones El Vendrell',
-      desc: 'Galería de trabajos reales de reformas de baños, platos de ducha de obra, piscinas, terrazas y cubiertas en El Vendrell y Baix Penedès. Calidad garantizada.'
-    },
-    ca: {
-      title: 'Projectes i Obres Realitzades | Arévalo Construcciones El Vendrell',
-      desc: "Galeria de treballs reals de reformes de banys, plats de dutxa d'obra, piscines, terrasses i cobertes a El Vendrell i Baix Penedès. Qualitat garantida."
-    }
-  },
-  '/nosotros': {
-    es: {
-      title: 'Sobre Nosotros | 3ª Generación de Albañiles | Arévalo Construcciones',
-      desc: 'Conoce a Javier Arévalo y nuestra tradición familiar de 3 generaciones de albañiles en El Vendrell. Presupuestos cerrados, garantía por contrato y seguro de RC en vigor.'
-    },
-    ca: {
-      title: 'Sobre Nosaltres | 3a Generació de Paletes | Arévalo Construcciones',
-      desc: 'Coneix a Javier Arévalo i la nostra tradició familiar de 3 generacions de paletes a El Vendrell. Pressupostos tancats, garantia per contracte i assegurança de RC en vigor.'
-    }
-  },
-  '/contacto': {
-    es: {
-      title: 'Contacto y Presupuesto por WhatsApp | Arévalo Construcciones El Vendrell',
-      desc: 'Pide presupuesto directo a Javier Arévalo por WhatsApp o teléfono al 622 03 27 04. Desplazamiento y valoración sin compromiso en Baix Penedès, Valls, Tarragona y Barcelona.'
-    },
-    ca: {
-      title: 'Contacte i Pressupost per WhatsApp | Arévalo Construcciones El Vendrell',
-      desc: 'Demana pressupost directe a Javier Arévalo per WhatsApp o telèfon al 622 03 27 04. Desplaçament i valoració sense compromís al Baix Penedès, Valls, Tarragona i Barcelona.'
-    }
+  ca: {
+    title: '404 - Pàgina no trobada | Arévalo Construcciones',
+    desc: "La pàgina que busques no existeix o s'ha mogut. Torna a l'inici d'Arévalo Construcciones a El Vendrell."
   }
 };
+
+function upsertMeta(selector, attrs) {
+  let el = document.head.querySelector(selector);
+  if (!el) {
+    el = document.createElement('meta');
+    document.head.appendChild(el);
+  }
+  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+  return el;
+}
+
+function upsertLink(selector, attrs) {
+  let el = document.head.querySelector(selector);
+  if (!el) {
+    el = document.createElement('link');
+    document.head.appendChild(el);
+  }
+  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+  return el;
+}
 
 export default function SEOHead() {
   const location = useLocation();
   const { lang } = useLanguage();
 
   useEffect(() => {
-    const pathname = location.pathname.toLowerCase();
-    const pageConfig = SEO_DATA[pathname] || {
-      es: {
-        title: '404 - Página no encontrada | Arévalo Construcciones',
-        desc: 'La página que buscas no existe o se ha movido. Vuelve al inicio de Arévalo Construcciones en El Vendrell.'
-      },
-      ca: {
-        title: '404 - Pàgina no trobada | Arévalo Construcciones',
-        desc: "La pàgina que busques no existeix o s'ha mogut. Torna a l'inici d'Arévalo Construcciones a El Vendrell."
-      }
-    };
     const activeLang = lang === 'ca' ? 'ca' : 'es';
-    const currentSEO = pageConfig[activeLang] || pageConfig.es;
+    const rawBase = stripLangPrefix(location.pathname.toLowerCase());
+    const basePath = rawBase.length > 1 ? rawBase.replace(/\/+$/, '') : rawBase;
+    const seo = getSeo(basePath, activeLang);
+    const current = seo || NOT_FOUND[activeLang];
 
-    // Actualizar document title
-    document.title = currentSEO.title;
-
-    // Actualizar atributo lang en el tag <html>
+    document.title = current.title;
     document.documentElement.lang = activeLang;
 
-    // Actualizar Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.name = 'description';
-      document.head.appendChild(metaDesc);
+    upsertMeta('meta[name="description"]', { name: 'description', content: current.desc });
+    upsertMeta('meta[property="og:title"]', { property: 'og:title', content: current.title });
+    upsertMeta('meta[property="og:description"]', { property: 'og:description', content: current.desc });
+    upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: activeLang === 'ca' ? 'ca_ES' : 'es_ES' });
+
+    // Las páginas 404 no deben indexarse
+    upsertMeta('meta[name="robots"]', {
+      name: 'robots',
+      content: seo ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow'
+    });
+
+    // hreflang: limpiar y regenerar
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+
+    if (seo) {
+      const canonicalUrl = urlFor(basePath, activeLang);
+      upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+      upsertLink('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
+
+      [
+        ['es', urlFor(basePath, 'es')],
+        ['ca', urlFor(basePath, 'ca')],
+        ['x-default', urlFor(basePath, 'es')]
+      ].forEach(([hl, href]) => {
+        const link = document.createElement('link');
+        link.rel = 'alternate';
+        link.hreflang = hl;
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    } else {
+      document.head.querySelector('link[rel="canonical"]')?.remove();
     }
-    metaDesc.content = currentSEO.desc;
 
-    // Actualizar Open Graph Title y Description
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.content = currentSEO.title;
-
-    let ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.content = currentSEO.desc;
-
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = `https://www.arevaloconstrucciones.com${pathname === '/' ? '' : pathname}`;
-
-    // Actualizar Canonical Tag
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `https://www.arevaloconstrucciones.com${pathname === '/' ? '' : pathname}`;
-
+    trackPageView(location.pathname, current.title);
   }, [location.pathname, lang]);
 
   return null;

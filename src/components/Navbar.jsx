@@ -5,10 +5,10 @@ import { useLanguage } from '../context/LanguageContext';
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { lang, changeLanguage, t } = useLanguage();
+  const { lang, changeLanguage, t, lp } = useLanguage();
 
   const isActive = (path) => {
-    return location.pathname === path 
+    return (location.pathname === lp(path) || (path !== '/' && location.pathname.startsWith(lp(path) + '/'))) 
       ? "text-brand-blue font-bold border-b-2 border-brand-accent pb-1" 
       : "text-gray-700 hover:text-brand-blue font-semibold transition-colors duration-200 pb-1";
   };
@@ -17,6 +17,7 @@ function Navbar() {
     { name: t('nav_home'), path: '/' },
     { name: t('nav_services'), path: '/servicios' },
     { name: t('nav_projects'), path: '/proyectos' },
+    { name: t('nav_zones_short'), path: '/zonas' },
     { name: t('nav_about'), path: '/nosotros' },
     { name: t('nav_contact'), path: '/contacto' },
   ];
@@ -28,8 +29,8 @@ function Navbar() {
         <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span>
           {lang === 'ca'
-            ? '📍 Servei exclusiu a Tarragona, Baix Penedès, Garraf i Barcelona'
-            : '📍 Servicio exclusivo en Tarragona, Baix Penedès, Garraf y Barcelona'}
+            ? '📍 Només treballem a Catalunya: Baix Penedès, Garraf, Tarragona i Barcelona'
+            : '📍 Solo trabajamos en Cataluña: Baix Penedès, Garraf, Tarragona y Barcelona'}
         </span>
       </div>
 
@@ -38,7 +39,7 @@ function Navbar() {
         <div className="flex justify-between h-20 items-center">
           
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center group">
+          <Link to={lp('/')} className="flex-shrink-0 flex items-center group">
             <img 
               src="/Logo.jpg" 
               alt="Arévalo Construcciones Logo" 
@@ -56,11 +57,11 @@ function Navbar() {
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-7">
+          <div className="hidden xl:flex items-center space-x-7">
             {navLinks.map((link) => (
               <Link 
                 key={link.path} 
-                to={link.path} 
+                to={lp(link.path)} 
                 className={`${isActive(link.path)} font-heading text-sm uppercase tracking-wider`}
               >
                 {link.name}
@@ -69,7 +70,7 @@ function Navbar() {
           </div>
 
           {/* Right Action: Language Selector & Phone */}
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden xl:flex items-center space-x-5">
             
             {/* Language Switcher sin recuadro */}
             <div className="flex items-center space-x-1.5 text-xs font-heading font-bold">
@@ -139,7 +140,7 @@ function Navbar() {
           </div>
 
           {/* Mobile menu button and Lang */}
-          <div className="flex items-center space-x-1 sm:space-x-2 md:hidden">
+          <div className="flex items-center space-x-1 sm:space-x-2 xl:hidden">
             
             {/* Mobile Lang switcher sin recuadro con tap target cómodo */}
             <div className="flex items-center space-x-1 text-xs font-heading font-bold mr-1">
@@ -182,15 +183,15 @@ function Navbar() {
 
       {/* Mobile Menu Panel */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-xl animate-fade-in">
+        <div className="xl:hidden bg-white border-t border-gray-100 shadow-xl animate-fade-in">
           <div className="px-5 pt-3 pb-6 space-y-2">
             {navLinks.map((link) => (
               <Link 
                 key={link.path}
-                to={link.path}
+                to={lp(link.path)}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-4 py-3 rounded-none font-heading font-bold text-base ${
-                  location.pathname === link.path 
+                  (location.pathname === lp(link.path) || (link.path !== '/' && location.pathname.startsWith(lp(link.path) + '/'))) 
                     ? 'bg-brand-light text-brand-blue' 
                     : 'text-gray-700 hover:bg-gray-50'
                 }`}

@@ -4,9 +4,10 @@ import { useLanguage } from "../context/LanguageContext";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import ReviewsSection from "../components/ReviewsSection";
 import FAQSection from "../components/FAQSection";
+import ZonasSection from "../components/ZonasSection";
 
 function Home() {
-  const { t } = useLanguage();
+  const { t, lp } = useLanguage();
 
   return (
     <div className="animate-fade-in">
@@ -42,20 +43,24 @@ function Home() {
           </p>
 
           {/* Badge de ámbito geográfico de actuación */}
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/25 backdrop-blur-md px-3.5 py-1.5 mb-8 text-xs sm:text-sm text-stone-200 font-heading font-medium">
+          <Link
+            to={lp('/zonas')}
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 hover:border-white/50 backdrop-blur-md px-3.5 py-1.5 mb-8 text-xs sm:text-sm text-stone-200 font-heading font-medium transition"
+          >
             <span className="text-emerald-400">📍</span>
             <span>{t('hero_area_badge')}</span>
-          </div>
+            <span aria-hidden="true">→</span>
+          </Link>
 
           <div className="flex flex-col sm:flex-row space-y-3.5 sm:space-y-0 sm:space-x-4 w-full sm:w-auto mb-10 sm:mb-12">
             <Link
-              to="/contacto"
+              to={lp('/contacto')}
               className="bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold text-sm uppercase tracking-wider py-4 px-9 rounded-none shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-brand-blue/30 text-center border border-white/20"
             >
               {t('hero_btn_quote')}
             </Link>
             <Link
-              to="/servicios"
+              to={lp('/servicios')}
               className="bg-white/10 hover:bg-white/20 border-2 border-white/40 hover:border-white text-white font-heading font-bold text-sm uppercase tracking-wider py-4 px-9 rounded-none backdrop-blur-sm transition-all duration-300 text-center"
             >
               {t('hero_btn_services')}
@@ -139,13 +144,13 @@ function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <Link
-                  to="/nosotros"
+                  to={lp('/nosotros')}
                   className="flex items-center justify-center bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-6 rounded-none shadow-lg transition duration-300 transform hover:-translate-y-0.5 text-sm uppercase tracking-wider text-center"
                 >
                   {t('about_btn_more')}
                 </Link>
                 <Link
-                  to="/proyectos"
+                  to={lp('/proyectos')}
                   className="flex items-center justify-center bg-white/70 hover:bg-white text-brand-blue font-heading font-bold py-3.5 px-6 rounded-none transition duration-300 text-sm uppercase tracking-wider text-center border border-stone-300 shadow-sm"
                 >
                   {t('about_btn_works')}
@@ -197,6 +202,9 @@ function Home() {
       {/* ===== OPINIONES REALES EN GOOGLE MAPS (5 ESTRELLAS) ===== */}
       <ReviewsSection />
 
+      {/* ===== ZONAS DE TRABAJO (VISIBLE) ===== */}
+      <ZonasSection />
+
       {/* ===== PREGUNTAS FRECUENTES (FAQ + SCHEMA FAQPAGE SEO) ===== */}
       <FAQSection />
 
@@ -211,7 +219,7 @@ function Home() {
               {t('cta_desc')}
             </p>
             <Link
-              to="/contacto"
+              to={lp('/contacto')}
               className="inline-flex items-center justify-center bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-8 sm:px-10 rounded-none shadow-lg transition duration-300 transform hover:-translate-y-0.5 text-xs sm:text-sm uppercase tracking-wider w-full sm:w-auto"
             >
               {t('cta_btn')}

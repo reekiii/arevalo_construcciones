@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 function Servicios() {
-  const { t, lang } = useLanguage();
+  const { t, lang, lp } = useLanguage();
 
   const services = [
     {
@@ -104,7 +104,7 @@ function Servicios() {
             {t('services_cta_desc')}
           </p>
           <Link 
-            to="/contacto"
+            to={lp('/contacto')}
             className="inline-block bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-8 rounded-none shadow-lg transition transform hover:-translate-y-0.5 text-xs sm:text-sm uppercase tracking-wider w-full sm:w-auto"
           >
             {t('services_cta_btn')}

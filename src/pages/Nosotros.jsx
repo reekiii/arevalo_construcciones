@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 function Nosotros() {
-  const { t } = useLanguage();
+  const { t, lp } = useLanguage();
 
   const values = [
     {
@@ -94,13 +94,13 @@ function Nosotros() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contacto"
+              to={lp('/contacto')}
               className="inline-flex items-center justify-center bg-brand-blue hover:bg-brand-blue-dark text-white font-heading font-bold py-3.5 px-8 rounded-none transition duration-300 text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg"
             >
               {t('cta_btn')} →
             </Link>
             <Link
-              to="/proyectos"
+              to={lp('/proyectos')}
               className="inline-flex items-center justify-center bg-white hover:bg-stone-50 text-brand-blue font-heading font-bold py-3.5 px-8 rounded-none transition duration-300 text-xs sm:text-sm uppercase tracking-wider border border-stone-300 shadow-sm"
             >
               {t('about_btn_works')}

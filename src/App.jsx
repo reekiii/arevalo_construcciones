@@ -6,6 +6,8 @@ import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import LegalModal from './components/LegalModal';
 import SEOHead from './components/SEOHead';
+import ZoneGate from './components/ZoneGate';
+import GeoNotice from './components/GeoNotice';
 
 // Pages
 import Home from './pages/Home';
@@ -14,21 +16,35 @@ import Proyectos from './pages/Proyectos';
 import Nosotros from './pages/Nosotros';
 import Contacto from './pages/Contacto';
 import NotFound from './pages/NotFound';
+import Zonas from './pages/Zonas';
+import Zona from './pages/Zona';
+
+const PAGES = [
+  ['', Home],
+  ['servicios', Servicios],
+  ['proyectos', Proyectos],
+  ['nosotros', Nosotros],
+  ['contacto', Contacto],
+  ['zonas', Zonas],
+  ['zonas/:slug', Zona],
+];
 
 function App() {
   return (
     <div className="min-h-screen bg-brand-bg font-body text-gray-800 flex flex-col">
       <SEOHead />
       <ScrollToTop />
+      <GeoNotice />
       <Navbar />
       
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<Servicios />} />
-          <Route path="/proyectos" element={<Proyectos />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contacto" element={<Contacto />} />
+          {PAGES.map(([path, Page]) => (
+            <Route key={`es-${path}`} path={`/${path}`} element={<Page />} />
+          ))}
+          {PAGES.map(([path, Page]) => (
+            <Route key={`ca-${path}`} path={path ? `/ca/${path}` : '/ca'} element={<Page />} />
+          ))}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
@@ -48,6 +64,7 @@ function App() {
       
       <Footer />
       <CookieBanner />
+      <ZoneGate />
       <LegalModal />
     </div>
   );
